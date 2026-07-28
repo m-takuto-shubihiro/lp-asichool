@@ -1,0 +1,17 @@
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# エディタ
+.vscode/
+.idea/
+
+# 依存パッケージ / ビルド成果物
+node_modules/
+dist/
+build/
+
+# 環境変数
+.env
+.env.local
