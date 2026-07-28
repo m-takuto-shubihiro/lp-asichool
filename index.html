@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>問学舎（もんがくしゃ）｜非エンジニアのための実務AI講座・全8回</title>
+<meta name="description" content="ツールの操作ではなく、自分の仕事をAIに渡せる形に分解する力を8回で身につけるオンライン講座。週1回90分・定員12名。無料説明会を受付中です。">
+<meta name="theme-color" content="#101A30">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="問学舎">
+<meta property="og:title" content="問学舎｜AIに、何を訊くか。">
+<meta property="og:description" content="非エンジニアのための実務AI講座。全8回・週1回90分・オンライン・定員12名。">
+<!-- TODO: og:image（1200×630）を用意したら images/ に置いて絶対URLで指定する -->
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23101A30'/%3E%3Ctext x='16' y='24' font-size='21' text-anchor='middle' fill='%23E0A32E' font-family='serif'%3E%E5%95%8F%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">本文へ移動</a>
+
+<header class="head" id="head">
+  <div class="head__inner">
+    <a class="logo" href="#top">
+      <span class="logo__mark" aria-hidden="true">問</span>
+      <span class="logo__text">
+        <span class="logo__ja">問学舎</span>
+        <span class="logo__en">MONGAKUSHA</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="メインメニュー">
+      <ul class="nav__list">
+        <li><a href="#about">考え方</a></li>
+        <li><a href="#curriculum">カリキュラム</a></li>
+        <li><a href="#flow">受講の流れ</a></li>
+        <li><a href="#teachers">講師</a></li>
+        <li><a href="#price">料金</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn btn--sm head__cta" href="#apply">無料説明会に申し込む</a>
+
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="メニューを開く">
+      <span class="burger__bar" aria-hidden="true"></span>
+      <span class="burger__bar" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ ヒーロー ============ -->
+  <section class="hero" id="top">
+    <div class="hero__grid">
+
+      <div class="hero__body">
+        <p class="eyebrow eyebrow--light">非エンジニアのための実務AI講座 ／ 全8回</p>
+
+        <p class="hero__lead">
+          生成AIは、指示の精度でしか応えません。問学舎で扱うのは、ツールの操作手順ではなく、
+          <strong>自分の仕事をAIに渡せる形に分解する力</strong>です。毎回、受講者が実際に抱えている業務を持ち込んで進めます。
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn" href="#apply">無料説明会に申し込む</a>
+          <a class="btn btn--ghost" href="#curriculum">カリキュラムを見る</a>
+        </div>
+
+        <dl class="facts">
+          <div class="facts__item">
+            <dt>回数</dt>
+            <dd>全8回 ／ 週1回90分</dd>
+          </div>
+          <div class="facts__item">
+            <dt>形式</dt>
+            <dd>オンライン ／ 録画あり</dd>
+          </div>
+          <div class="facts__item">
+            <dt>定員</dt>
+            <dd>12名 ／ 1期</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="hero__stage">
+        <div class="genkou" aria-hidden="true"></div>
+        <h1 class="tate">
+          <span class="tate__main">
+            <span class="ln"><span class="tcy">AI</span>に、</span><span class="ln">何を訊くか。</span>
+          </span>
+          <span class="tate__sub">答えより先に、問いを。</span>
+        </h1>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ 現在地 ============ -->
+  <section class="section" id="now">
+    <div class="wrap">
+      <p class="eyebrow">現在地</p>
+      <h2 class="h2">触ってはいる。でも、仕事は変わっていない。</h2>
+
+      <div class="cards" data-reveal>
+        <article class="card">
+          <h3 class="card__title">「便利そう」で止まる</h3>
+          <p>使う場面が自分の業務と結びつかないまま、月額の請求だけが続いている。</p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">出力を毎回書き直す</h3>
+          <p>指示があいまいなぶんを、自分の手直しで埋めている。結局、時間は減らない。</p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">一度きりで終わる</h3>
+          <p>うまくいった手順が残らないので、来週も同じところから始めることになる。</p>
+        </article>
+      </div>
+
+      <p class="note" data-reveal>足りないのはツールの知識ではありません。仕事を言葉で分解する手順です。</p>
+    </div>
+  </section>
+
+  <!-- ============ 考え方 ============ -->
+  <section class="section section--ai" id="about">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--light">考え方</p>
+      <h2 class="h2 h2--light">答えは配りません。問いの立て方を渡します。</h2>
+
+      <div class="pillars" data-reveal>
+        <div class="pillar">
+          <h3 class="pillar__title">自分の業務で進める</h3>
+          <p>教材用の例題は使いません。いま抱えている仕事を毎回持ち込み、その場で分解します。</p>
+        </div>
+        <div class="pillar">
+          <h3 class="pillar__title">手順を残す</h3>
+          <p>うまくいったプロンプトは、翌週から使える手順書として書き出します。記憶に頼りません。</p>
+        </div>
+        <div class="pillar">
+          <h3 class="pillar__title">ツールに依存しない</h3>
+          <p>ChatGPT・Claude・Gemini を横断して扱います。乗り換えてもそのまま使える考え方が残ります。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ カリキュラム ============ -->
+  <section class="section" id="curriculum">
+    <div class="wrap">
+      <p class="eyebrow">カリキュラム ／ 8つの問い</p>
+      <h2 class="h2">週にひとつ、問いを持ち帰る。</h2>
+      <p class="lead">各回のタイトルは、その週に答えを出す問いです。90分の終わりには、必ず持ち帰る成果物が1つ残ります。</p>
+
+      <ol class="curriculum" data-reveal>
+        <li class="lesson">
+          <p class="lesson__no">01</p>
+          <h3 class="lesson__q">何を頼めば、AIは正しく答えるか。</h3>
+          <p class="lesson__d">指示を「役割・前提・出力形式」の3要素に分解し、書き直しの回数を減らします。</p>
+          <p class="lesson__out"><span>成果物</span>自分用のプロンプト雛形 3本</p>
+        </li>
+        <li class="lesson">
+          <p class="lesson__no">02</p>
+          <h3 class="lesson__q">その情報は、信じていいか。</h3>
+          <p class="lesson__d">下調べと要約。出典の確かめ方と、鵜呑みにしないための確認手順を決めます。</p>
+          <p class="lesson__out"><span>成果物</span>調査メモのテンプレート</p>
+        </li>
+        <li class="lesson">
+          <p class="lesson__no">03</p>
+          <h3 class="lesson__q">その文章は、誰が読むか。</h3>
+          <p class="lesson__d">メール・議事録・企画書を、読み手に合わせて書き分けます。文体の指示語を揃えます。</p>
+          <p class="lesson__out"><span>成果物</span>文体ガイド 1枚</p>
+        </li>
+        <li class="lesson">
+          <p class="lesson__no">04</p>
+          <h3 class="lesson__q">この数字は、何を言っているか。</h3>
+          <p class="lesson__d">表計算とデータ整理。集計・分類・要約のうち、AIに任せる範囲と任せない範囲を線引きします。</p>
+          <p class="lesson__out"><span>成果物</span>集計手順シート</p>
+        </li>
+        <li class="lesson">
+          <p class="lesson__no">05</p>
+          <h3 class="lesson__q">一目で伝わる資料とは。</h3>
+          <p class="lesson__d">スライド構成と画像生成。見た目より先に、伝える順番を決めてから作ります。</p>
+          <p class="lesson__out"><span>成果物</span>提案資料のドラフト</p>
+        </li>
+        <li class="lesson">
+          <p class="lesson__no">06</p>
+          <h3 class="lesson__q">自分の仕事は、どこで詰まるか。</h3>
+          <p class="lesson__d">1週間の業務を棚卸しして、AIに渡せる工程と、人が持つべき工程を切り分けます。</p>
+          <p class="lesson__out"><span>成果物</span>業務分解マップ</p>
+        </li>
+        <li class="lesson">
+          <p class="lesson__no">07</p>
+          <h3 class="lesson__q">同じ作業を、二度やらないためには。</h3>
+          <p class="lesson__d">固まった手順を GPTs や定型ワークフローに載せ替え、毎回書かなくていい状態にします。</p>
+          <p class="lesson__out"><span>成果物</span>自分専用のAIツール 1つ</p>
+        </li>
+        <li class="lesson">
+          <p class="lesson__no">08</p>
+          <h3 class="lesson__q">結局、何が置き換わったか。</h3>
+          <p class="lesson__d">卒業制作。実務を1つ選んで置き換え、かかった時間の前後を添えて発表します。</p>
+          <p class="lesson__out"><span>成果物</span>発表資料と before / after</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 受講の流れ ============ -->
+  <section class="section section--pale" id="flow">
+    <div class="wrap">
+      <p class="eyebrow">受講の流れ</p>
+      <h2 class="h2">申し込みから卒業まで。</h2>
+
+      <ol class="flow" data-reveal>
+        <li class="step">
+          <p class="step__no">STEP 1</p>
+          <h3 class="step__t">説明会に申し込む</h3>
+          <p>フォームに希望日を入れて送信します。所要3分、費用はかかりません。</p>
+        </li>
+        <li class="step">
+          <p class="step__no">STEP 2</p>
+          <h3 class="step__t">60分、オンラインで話す</h3>
+          <p>いまの業務と、AIで減らしたい時間を伺います。合わないと判断したらその場でお伝えします。</p>
+        </li>
+        <li class="step">
+          <p class="step__no">STEP 3</p>
+          <h3 class="step__t">開講（週1回90分 × 8）</h3>
+          <p>毎週、自分の業務を1つ持ち込みます。欠席回は録画で追いつけます。</p>
+        </li>
+        <li class="step">
+          <p class="step__no">STEP 4</p>
+          <h3 class="step__t">卒業後も手順は残る</h3>
+          <p>作った手順書とツールは受講者のものです。教材と録画は卒業後も見られます。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 講師 ============ -->
+  <!-- ダミー：氏名・経歴はすべて架空。写真を入れる場合は images/ に置いて .face を <img> に差し替える -->
+  <section class="section" id="teachers">
+    <div class="wrap">
+      <p class="eyebrow">講師</p>
+      <h2 class="h2">現場で使っている人が教えます。</h2>
+
+      <div class="teachers" data-reveal>
+        <article class="teacher">
+          <p class="face" aria-hidden="true">藤</p>
+          <div class="teacher__body">
+            <h3 class="teacher__name">藤代 悠<span class="teacher__kana">ふじしろ ゆう</span></h3>
+            <p class="teacher__role">主任講師 ／ 事業会社マーケティング部門</p>
+            <p>広告運用と販促の実務で生成AIを日常的に使う。定型レポートの作成時間を週6時間から1時間に減らした手順を、そのまま教材にしている。</p>
+          </div>
+        </article>
+        <article class="teacher">
+          <p class="face" aria-hidden="true">中</p>
+          <div class="teacher__body">
+            <h3 class="teacher__name">中原 志保<span class="teacher__kana">なかはら しほ</span></h3>
+            <p class="teacher__role">講師 ／ 元・経理、業務設計</p>
+            <p>経理13年。数字の扱いとチェック体制に詳しい。「AIに任せてよい範囲」を決める回を担当する。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 受講生の声 ============ -->
+  <!-- ダミー：演習用のサンプルテキスト。実案件では実名・許諾つきの声に差し替える -->
+  <section class="section section--ai" id="voices">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--light">受講生の声</p>
+      <h2 class="h2 h2--light">8週間で変わったこと。</h2>
+
+      <div class="voices" data-reveal>
+        <figure class="voice">
+          <blockquote><p>議事録の清書に毎回40分かけていました。いまは録音を渡して10分で確認するだけです。浮いた時間で先に提案書を書いています。</p></blockquote>
+          <figcaption>営業／30代<span>受講3期</span></figcaption>
+        </figure>
+        <figure class="voice">
+          <blockquote><p>プロンプトという言葉すら知りませんでした。第6回で自分の1週間を書き出したとき、任せられる作業がこんなにあるのかと驚きました。</p></blockquote>
+          <figcaption>総務／40代<span>受講2期</span></figcaption>
+        </figure>
+        <figure class="voice">
+          <blockquote><p>いちばん効いたのは手順書を残す習慣でした。同じ指示を書き直さなくなり、チームにも配れるようになりました。</p></blockquote>
+          <figcaption>企画／30代<span>受講3期</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 料金 ============ -->
+  <section class="section" id="price">
+    <div class="wrap">
+      <p class="eyebrow">料金</p>
+      <h2 class="h2">2つのプランがあります。</h2>
+      <p class="lead">どちらも全8回・録画・教材つきです。個別に相談しながら進めたい場合は実践プランを選んでください。</p>
+
+      <div class="plans" data-reveal>
+        <article class="plan">
+          <h3 class="plan__name">ベーシック</h3>
+          <p class="plan__price"><span class="plan__num">198,000</span><span class="plan__unit">円（税込）</span></p>
+          <p class="plan__desc">グループ受講だけで完結するプランです。</p>
+          <ul class="plan__list">
+            <li>全8回（週1回90分）</li>
+            <li>定員12名のグループ講義</li>
+            <li>教材・録画（卒業後も閲覧可）</li>
+            <li>手順書テンプレート一式</li>
+          </ul>
+          <a class="btn btn--ghost btn--full" href="#apply">説明会で相談する</a>
+        </article>
+
+        <article class="plan plan--pick">
+          <p class="plan__tag">個別相談つき</p>
+          <h3 class="plan__name">実践</h3>
+          <p class="plan__price"><span class="plan__num">298,000</span><span class="plan__unit">円（税込）</span></p>
+          <p class="plan__desc">自分の業務に踏み込んで作り切りたい方へ。</p>
+          <ul class="plan__list">
+            <li>ベーシックのすべて</li>
+            <li>個別面談 全4回（各45分）</li>
+            <li>卒業後3か月の質問対応</li>
+            <li>業務分解マップの添削</li>
+          </ul>
+          <a class="btn btn--full" href="#apply">説明会で相談する</a>
+        </article>
+      </div>
+
+      <p class="note" data-reveal>分割払い（3回・6回）に対応しています。法人払いの場合は請求書を発行します。</p>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section section--pale" id="faq">
+    <div class="wrap wrap--narrow">
+      <p class="eyebrow">よくある質問</p>
+      <h2 class="h2">先に答えておきます。</h2>
+
+      <div class="faq" data-reveal>
+        <details class="qa">
+          <summary>AIを使ったことがありません。ついていけますか。</summary>
+          <p>第1回はアカウントの作成から始めます。受講者の約6割が、申込時点で「ほとんど使っていない」と答えています。</p>
+        </details>
+        <details class="qa">
+          <summary>参加できない回が出そうです。</summary>
+          <p>当日中に録画を配信します。課題は次回までに提出すれば、進行に影響しません。</p>
+        </details>
+        <details class="qa">
+          <summary>会社のPCで受講できますか。</summary>
+          <p>ブラウザだけで完結します。生成AIへのアクセスが社内で制限されている場合は、説明会で運用方法を一緒に確認します。</p>
+        </details>
+        <details class="qa">
+          <summary>有料プランの契約は必要ですか。</summary>
+          <p>第4回以降は有料プラン（月額20ドル前後）があると演習がスムーズです。無料枠のみで進める方法も併せて案内します。</p>
+        </details>
+        <details class="qa">
+          <summary>プログラミングは扱いますか。</summary>
+          <p>扱いません。コードを書かずに済む範囲で、業務を自動化するところまで進みます。</p>
+        </details>
+        <details class="qa">
+          <summary>支払い方法を教えてください。</summary>
+          <p>クレジットカード、銀行振込、請求書払いに対応しています。開講7日前までのキャンセルは全額返金します。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="apply" id="apply">
+    <div class="wrap wrap--narrow apply__inner">
+      <p class="eyebrow eyebrow--light">無料説明会</p>
+      <h2 class="apply__h">まず、いまの仕事を聞かせてください。</h2>
+      <p class="apply__lead">
+        60分のオンライン面談です。受講を決めていなくても構いません。合わないと判断した場合はその場でお伝えします。
+        次回開講は<strong>9月2日（水）</strong>、残り<strong>4席</strong>です。
+      </p>
+      <!-- TODO: 申込フォームのURLに差し替える -->
+      <a class="btn btn--lg" href="https://example.com/entry">無料説明会に申し込む</a>
+      <p class="apply__note">所要3分／しつこい勧誘はしません</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <div class="foot__brand">
+      <a class="logo logo--foot" href="#top">
+        <span class="logo__mark" aria-hidden="true">問</span>
+        <span class="logo__text">
+          <span class="logo__ja">問学舎</span>
+          <span class="logo__en">MONGAKUSHA</span>
+        </span>
+      </a>
+      <p class="foot__tag">AIに、何を訊くか。</p>
+    </div>
+
+    <nav class="foot__nav" aria-label="フッターメニュー">
+      <ul>
+        <li><a href="#about">考え方</a></li>
+        <li><a href="#curriculum">カリキュラム</a></li>
+        <li><a href="#flow">受講の流れ</a></li>
+        <li><a href="#teachers">講師</a></li>
+        <li><a href="#price">料金</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="wrap foot__bottom">
+    <p class="foot__disclaimer">本ページはLP制作演習用のサンプルです。学校名・講師・受講生の声・料金・日程はすべて架空のものです。</p>
+    <p class="foot__copy">© 2026 問学舎（架空）</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

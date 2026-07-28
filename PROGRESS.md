@@ -7,34 +7,53 @@ LP制作演習リポジトリの進捗メモ。次回はこのファイルを最
 - ローカル: `C:\Users\takut\lp制作-AIの学校演習`
 - リモート: https://github.com/m-takuto-shubihiro/lp-asichool
 - 既定ブランチ: `main`
+- 公開URL: https://m-takuto-shubihiro.github.io/lp-asichool/ （GitHub Pages・public）
 
 ## 現在の状態（2026-07-28 時点）
 
-セットアップのみ完了。LPの実体ファイル（HTML/CSS など）はまだ未作成。
+LP本体を作成し、GitHub Pages で公開済み。
 
 管理下のファイル:
 
 | ファイル | 内容 |
 | --- | --- |
-| `README.md` | リポジトリの概要（LP制作の演習用） |
+| `index.html` | LP本体（1枚もの・ビルド不要） |
+| `css/style.css` | スタイル。色・書体はすべて `:root` のカスタムプロパティ |
+| `js/main.js` | スマホメニュー開閉、スクロール表示 |
+| `images/.gitkeep` | 画像置き場（現状は空） |
+| `README.md` | 題材・構成・差し替え箇所 |
 | `.gitignore` | OS/エディタ/依存パッケージ・ビルド成果物/環境変数を除外 |
 | `PROGRESS.md` | このファイル（作業記録） |
 
 `.claude/settings.local.json` はローカル設定のためコミット対象外（`.git/info/exclude` で除外済み）。
 
+## LPの内容
+
+架空のAIスクール **問学舎（もんがくしゃ）** の受講生募集LP。非エンジニアの社会人向け・全8回のオンライン講座。
+ページの役割は「無料説明会への申込」ひとつ。
+
+- コンセプト: 「答えより先に、問いを」。カリキュラム各回のタイトルをすべて問い文にしている
+- ファーストビュー: 縦組み明朝「AIに、何を訊くか。」＋原稿用紙の罫。`text-combine-upright` で AI のみ正立
+- 配色: 藍 / 深藍 / 白藍 / 青磁 / 山吹（CTA）
+- 書体: しっぽり明朝B1・Zen角ゴシックNew・IBM Plex Mono（Google Fonts）
+- セクション: ヒーロー → 現在地 → 考え方 → カリキュラム(全8回) → 受講の流れ → 講師 → 受講生の声 → 料金 → FAQ → CTA → フッター
+
+掲載している学校名・講師・声・料金・日程はすべて架空。フッターにその旨を明記している。
+
 ## これまでの作業ログ
 
 - 2026-07-28: リポジトリを作成し、`README.md` と `.gitignore` を初期コミット（`9196a6d`）。GitHub の `origin/main` へ push 済み。
 - 2026-07-28: 作業記録として `PROGRESS.md` を追加。
+- 2026-07-28: LP本体（`index.html` / `css/style.css` / `js/main.js`）を作成。README を書き直し。
+- 2026-07-28: リポジトリを public に変更し、GitHub Pages（`main` / root）で公開。
 
 ## 次にやること（TODO）
 
-- [ ] LPの要件を決める（誰向けの・何のLPか、掲載セクション、参考デザイン）
-- [ ] ディレクトリ構成を決める（例: `index.html` / `css/` / `js/` / `images/`）
-- [ ] ファーストビュー（ヒーローセクション）の作成
-- [ ] 本文セクション（特徴 / 料金 / よくある質問 / CTA など）の作成
-- [ ] レスポンシブ対応（スマホ表示の確認）
-- [ ] 公開方法の検討（GitHub Pages など）
+- [ ] 申込フォームのURLを差し替える（最終CTAが `https://example.com/entry` のまま）
+- [ ] og:image（1200×630）を作って `images/` に置き、絶対URLで指定する
+- [ ] 講師写真を用意して `.face` を `<img>` に置き換える
+- [ ] 実機（スマホ実端末）で縦組みヒーローの見え方を確認する
+- [ ] Lighthouse でパフォーマンス／アクセシビリティを計測する
 
 ## 再開のしかた
 
