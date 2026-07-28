@@ -1,18 +1,17 @@
-/* 問学舎 LP — 動き
+/* AIの学校 LP — 動き
    1) スマホメニュー
    2) カテゴリの絞り込み
-   3) 各回の「View More」開閉
-   4) 気になる回（チェック）— localStorage に保存し、件数をヘッダーと下部バーに出す
-   5) 開講までのカウントダウン
-   6) スクロール表示
+   3) 各章の「くわしく見る」開閉
+   4) 気になる章 — localStorage に保存し、件数をヘッダーと下部バーに出す
+   5) スクロール表示
    動きは prefers-reduced-motion を尊重する。 */
 
 (function () {
   'use strict';
 
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var PICK_KEY = 'mongaku:picks';
-  var BAR_KEY = 'mongaku:barClosed';
+  var PICK_KEY = 'aischool:picks';
+  var BAR_KEY = 'aischool:barClosed';
 
   /* ---------- 1. スマホメニュー ---------- */
   var burger = document.getElementById('burger');
@@ -71,7 +70,7 @@
     });
   });
 
-  /* ---------- 3. View More ---------- */
+  /* ---------- 3. くわしく見る ---------- */
   document.querySelectorAll('.more').forEach(function (btn) {
     var panel = document.getElementById(btn.getAttribute('aria-controls'));
     if (!panel) return;
@@ -80,11 +79,11 @@
       var open = btn.getAttribute('aria-expanded') === 'true';
       btn.setAttribute('aria-expanded', String(!open));
       panel.hidden = open;
-      btn.textContent = open ? 'View More' : 'Close';
+      btn.textContent = open ? 'くわしく見る' : '閉じる';
     });
   });
 
-  /* ---------- 4. 気になる回 ---------- */
+  /* ---------- 4. 気になる章 ---------- */
   var favs = document.querySelectorAll('.fav');
   var chip = document.getElementById('pickChip');
   var chipNum = document.getElementById('pickNum');
@@ -119,7 +118,7 @@
       chip.classList.toggle('is-hot', n > 0);
       if (bump && !reduce) {
         chip.classList.add('is-bump');
-        setTimeout(function () { chip.classList.remove('is-bump'); }, 220);
+        setTimeout(function () { chip.classList.remove('is-bump'); }, 200);
       }
     }
 
@@ -160,30 +159,13 @@
     barX.addEventListener('click', function () {
       bar.classList.remove('is-up');
       try { sessionStorage.setItem(BAR_KEY, '1'); } catch (err) { /* noop */ }
-      setTimeout(function () { bar.hidden = true; }, reduce ? 0 : 400);
+      setTimeout(function () { bar.hidden = true; }, reduce ? 0 : 340);
     });
   }
 
   paint(false);
 
-  /* ---------- 5. 開講までのカウントダウン ---------- */
-  var count = document.getElementById('count');
-  var countNum = document.getElementById('countNum');
-
-  if (count && countNum) {
-    var start = new Date('2026-09-02T19:30:00+09:00');
-    var days = Math.ceil((start.getTime() - Date.now()) / 86400000);
-
-    if (days > 0) {
-      countNum.textContent = String(days);
-    } else {
-      // 開講日を過ぎたら日数ではなく状態を出す
-      count.textContent = '9月2日（水）開講';
-      count.classList.add('count--past');
-    }
-  }
-
-  /* ---------- 6. スクロール表示 ---------- */
+  /* ---------- 5. スクロール表示 ---------- */
   var targets = document.querySelectorAll('[data-reveal]');
 
   if (reduce || !('IntersectionObserver' in window)) {

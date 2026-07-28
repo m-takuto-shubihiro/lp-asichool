@@ -3,22 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>問学舎（もんがくしゃ）｜AIに、何を訊く？ 非エンジニアのための実務AI講座・全8回</title>
-<meta name="description" content="AIに何を訊くか、で仕事は変わる。非エンジニアのための実務AI講座。全8回・週1回90分・オンライン・定員12名。9月2日開講、無料説明会を受付中です。">
-<meta name="theme-color" content="#17143a">
+<title>AIの学校｜2日間で、AIを実務に入れる。オフラインの実践講義</title>
+<meta name="description" content="オフラインの実践講義で、AIを実務で使うスキルと考え方を学ぶ2日間。東京駅周辺・定員30名。プロンプト演習からスライド・LP・LINE連携ツールの制作まで、手を動かして持ち帰ります。株式会社シュビヒロ主催。">
+<meta name="theme-color" content="#1e3068">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:site_name" content="問学舎">
-<meta property="og:title" content="問学舎｜AIに、何を訊く？">
-<meta property="og:description" content="非エンジニアのための実務AI講座。全8回・週1回90分・オンライン・定員12名。9月2日開講。">
-<!-- TODO: og:image（1200×630）を作って images/ に置き、絶対URLで指定する -->
+<meta property="og:site_name" content="AIの学校">
+<meta property="og:title" content="AIの学校｜2日間で、AIを実務に入れる。">
+<meta property="og:description" content="オフラインの実践講義で、AIを実務で使うスキルと考え方を学ぶ2日間。東京駅周辺・定員30名。">
+<meta property="og:image" content="https://m-takuto-shubihiro.github.io/lp-asichool/images/ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238b3df5'/%3E%3Cstop offset='1' stop-color='%23ff4d9e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Ctext x='16' y='24' font-size='22' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='bold'%3E%3F%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%231e3068'/%3E%3Ctext x='16' y='22' font-size='15' text-anchor='middle' fill='%23f5a623' font-family='sans-serif' font-weight='bold'%3EAI%3C/text%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -26,34 +29,55 @@
 
 <a class="skip" href="#main">本文へ移動</a>
 
+<!-- ピクトグラム。外部SVGへの <use> はブラウザに弾かれるので本文に置く -->
+<svg class="sprite" aria-hidden="true" focusable="false"><defs>
+  <g id="i-clock"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3.5 2.5"/></g>
+  <g id="i-bulb"><path d="M9 16.5a6 6 0 1 1 6 0v1.5H9z"/><path d="M9.8 21h4.4"/></g>
+  <g id="i-grid"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></g>
+  <g id="i-book"><path d="M4 5.5h6.5a2 2 0 0 1 1.5 1.5 2 2 0 0 1 1.5-1.5H20V18h-6.5a2 2 0 0 0-1.5 1 2 2 0 0 0-1.5-1H4z"/><path d="M12 7v11"/></g>
+  <g id="i-shield"><path d="M12 3.5l7 2.6v5.6c0 4-3 7-7 8.8-4-1.8-7-4.8-7-8.8V6.1z"/><path d="M9 12l2.2 2.2L15.5 10"/></g>
+  <g id="i-chat"><path d="M4 5h16v10H11l-4 4v-4H4z"/><circle cx="9" cy="10" r=".9"/><circle cx="12" cy="10" r=".9"/><circle cx="15" cy="10" r=".9"/></g>
+  <g id="i-map"><path d="M3 4h7v5H3zM14 4h7v5h-7zM8.5 15h7v5h-7z"/><path d="M6.5 9v3h11V9M12 12v3"/></g>
+  <g id="i-slide"><path d="M3 4h18v12H3z"/><path d="M7 8.5h7M7 12h4M12 16v4M9 20h6"/></g>
+  <g id="i-browser"><path d="M3 4.5h18v15H3z"/><path d="M3 9h18M6 6.7h.01M9 6.7h.01"/></g>
+  <g id="i-gear"><circle cx="12" cy="12" r="3.4"/><path d="M12 3.6v2.5M12 17.9v2.5M3.6 12h2.5M17.9 12h2.5M6.2 6.2 8 8M16 16l1.8 1.8M17.8 6.2 16 8M8 16l-1.8 1.8"/></g>
+  <g id="i-flag"><path d="M6 3v18"/><path d="M6 4.5h12l-2.6 3.9 2.6 3.9H6z"/></g>
+  <g id="i-spark"><path d="M12 3l2.2 6.3L20.5 11l-6.3 1.8L12 19l-2.2-6.2L3.5 11l6.3-1.7z"/><path d="M18.5 17.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></g>
+  <g id="i-laptop"><path d="M5 5.5h14V16H5z"/><path d="M3 18.5h18M10.5 16h3"/></g>
+  <g id="i-people"><circle cx="8.5" cy="8" r="2.8"/><circle cx="16" cy="9" r="2.3"/><path d="M3.5 19v-1.5a5 5 0 0 1 10 0V19M15 19v-1.4a4.2 4.2 0 0 1 5.5-4"/></g>
+  <g id="i-pc"><path d="M5 5.5h14V16H5z"/><path d="M3 18.5h18M10.5 16h3"/></g>
+  <g id="i-plug"><path d="M9 3.5v4M15 3.5v4M6.5 7.5h11v3a5.5 5.5 0 0 1-11 0z"/><path d="M12 16v4.5"/></g>
+  <g id="i-pen"><path d="M4 20h4L20 8l-4-4L4 16z"/><path d="M14.5 5.5 18.5 9.5"/></g>
+</defs></svg>
+
 <header class="head" id="head">
   <div class="head__inner">
     <a class="logo" href="#top">
-      <span class="logo__mark" aria-hidden="true">?</span>
+      <span class="logo__mark" aria-hidden="true">AI</span>
       <span class="logo__text">
-        <span class="logo__ja">問学舎</span>
-        <span class="logo__en">MONGAKUSHA</span>
+        <span class="logo__name">AIの学校</span>
+        <span class="logo__sub">株式会社シュビヒロ主催</span>
       </span>
     </a>
 
     <nav class="nav" id="nav" aria-label="メインメニュー">
       <ul class="nav__list">
-        <li><a href="#intro">はじめに</a></li>
-        <li><a href="#curriculum">全8回</a></li>
-        <li><a href="#schedule">日程</a></li>
-        <li><a href="#organizer">主催</a></li>
-        <li><a href="#price">料金</a></li>
-        <li><a href="#faq">Q&amp;A</a></li>
+        <li><a href="#feature">特長</a></li>
+        <li><a href="#outline">開催概要</a></li>
+        <li><a href="#curriculum">カリキュラム</a></li>
+        <li><a href="#timetable">当日の流れ</a></li>
+        <li><a href="#price">受講料</a></li>
+        <li><a href="#faq">よくある質問</a></li>
       </ul>
     </nav>
 
     <a class="pick" href="#curriculum" id="pickChip">
       <span class="pick__i" aria-hidden="true">✓</span>
-      <span class="pick__label">気になる回</span>
+      <span class="pick__label">気になる章</span>
       <span class="pick__num" id="pickNum">0</span>
     </a>
 
-    <a class="btn btn--sm head__cta" href="#apply">説明会に申し込む</a>
+    <a class="btn btn--sm head__cta" href="#apply">申し込む</a>
 
     <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="メニューを開く">
       <span class="burger__bar" aria-hidden="true"></span>
@@ -66,483 +90,592 @@
 
   <!-- ============ ヒーロー ============ -->
   <section class="hero" id="top">
-    <div class="blobs" aria-hidden="true">
-      <span class="blob blob--1"></span>
-      <span class="blob blob--2"></span>
-      <span class="q q--1">?</span>
-      <span class="q q--2">?</span>
-      <span class="q q--3">?</span>
-    </div>
-
     <div class="hero__inner">
-      <p class="kicker">非エンジニアのための実務AI講座 ／ 全8回・オンライン</p>
 
-      <h1 class="hero__h">
-        <span class="hero__en hero__en--out">WHAT WILL</span>
-        <span class="hero__en hero__en--fill">YOU ASK?</span>
-        <span class="hero__ja">AIに、何を訊く？</span>
-      </h1>
+      <div class="hero__body">
+        <p class="kicker">オフラインの実践講義 ／ 2日間の集中講義</p>
 
-      <p class="hero__lead">
-        AIは、こちらが訊いたぶんしか答えません。覚えるのは操作ではなく、<b>自分の仕事を言葉でほどく手つき</b>です。
-      </p>
+        <h1 class="hero__h"><span class="mark">2日間で、<br>AIを実務に入れる。</span></h1>
 
-      <div class="hero__actions">
-        <a class="btn btn--lg" href="#apply">無料説明会に申し込む</a>
-        <a class="btn btn--line" href="#curriculum">全8回を見る</a>
-      </div>
-
-      <div class="hero__strip">
-        <p class="count" id="count">
-          <span class="count__label">9月2日（水）開講まで</span>
-          <span class="count__num" id="countNum">--</span>
-          <span class="count__unit">日</span>
+        <p class="hero__lead">
+          動画を見て終わる講座ではありません。東京の教室に集まって、<b>自分のノートパソコンで手を動かす</b>2日間です。
+          プロンプトの書き方から、スライド・LP・LINE連携ツールの制作まで、作ったものを持ち帰ります。
         </p>
-        <ul class="chips">
-          <li class="chip">週1回 90分</li>
-          <li class="chip">オンライン</li>
-          <li class="chip">録画あり</li>
-          <li class="chip">定員12名</li>
-        </ul>
+
+        <div class="hero__actions">
+          <a class="btn btn--lg" href="#apply">申し込みフォームへ</a>
+          <a class="btn btn--line" href="#curriculum">カリキュラムを見る</a>
+        </div>
+
+        <dl class="facts">
+          <div class="facts__i">
+            <dt>日程</dt>
+            <dd>7月27日（月）<br>・28日（火）</dd>
+          </div>
+          <div class="facts__i">
+            <dt>会場</dt>
+            <dd>東京駅周辺<br>を予定</dd>
+          </div>
+          <div class="facts__i">
+            <dt>定員</dt>
+            <dd>30名<br>先着</dd>
+          </div>
+        </dl>
       </div>
 
-      <p class="sticker sticker--hero">ノリで<br>来ていい</p>
+      <div class="hero__figure">
+        <svg class="art" viewBox="0 0 440 340" role="img" aria-labelledby="artTitle">
+          <title id="artTitle">ノートパソコンと付箋のイラスト</title>
+          <defs>
+            <pattern id="halftone" width="12" height="12" patternUnits="userSpaceOnUse">
+              <circle cx="3" cy="3" r="2.3" fill="#1a1f2e"></circle>
+            </pattern>
+          </defs>
+
+          <rect x="14" y="18" width="96" height="96" fill="url(#halftone)" opacity=".18"></rect>
+          <rect x="330" y="236" width="96" height="88" fill="url(#halftone)" opacity=".18"></rect>
+
+          <!-- 付箋 -->
+          <g transform="rotate(9 378 70)">
+            <rect class="art__note" x="336" y="28" width="84" height="84"></rect>
+            <path class="art__noteline" d="M352 56h52M352 76h36"></path>
+          </g>
+
+          <!-- ノートパソコン -->
+          <g class="art__pc">
+            <rect class="art__screen" x="96" y="78" width="248" height="160" rx="8"></rect>
+            <rect class="art__bar" x="118" y="100" width="96" height="26"></rect>
+            <path class="art__line" d="M118 146h204M118 172h164M118 198h124"></path>
+            <path class="art__base" d="M68 240h304l22 32H46z"></path>
+            <path class="art__notch" d="M198 254h44"></path>
+          </g>
+        </svg>
+
+        <p class="sticker">手を<br>動かす</p>
+      </div>
+
     </div>
   </section>
 
-  <!-- ============ 流れるスローガン ============ -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee__track" id="mqTrack">
-      <span class="marquee__set">
-        <b>ASK BETTER</b><i>✳</i><b>いい問いを。</b><i>✳</i><b>問う力</b><i>✳</i><b>THE POWER OF ASKING</b><i>✳</i><b>好的提问</b><i>✳</i><b>좋은 질문</b><i>✳</i>
-      </span>
-      <span class="marquee__set">
-        <b>ASK BETTER</b><i>✳</i><b>いい問いを。</b><i>✳</i><b>問う力</b><i>✳</i><b>THE POWER OF ASKING</b><i>✳</i><b>好的提问</b><i>✳</i><b>좋은 질문</b><i>✳</i>
-      </span>
+  <!-- ============ 流れる帯 ============ -->
+  <div class="band" aria-hidden="true">
+    <div class="band__track">
+      <span class="band__set"><b>オフラインの実践講義</b><i>／</i><b>2日間の集中講義</b><i>／</i><b>東京駅周辺</b><i>／</i><b>定員30名</b><i>／</i><b>AIを実務で使う</b><i>／</i></span>
+      <span class="band__set"><b>オフラインの実践講義</b><i>／</i><b>2日間の集中講義</b><i>／</i><b>東京駅周辺</b><i>／</i><b>定員30名</b><i>／</i><b>AIを実務で使う</b><i>／</i></span>
     </div>
   </div>
 
-  <!-- ============ イントロ ============ -->
-  <section class="intro" id="intro">
-    <div class="wrap wrap--narrow">
-      <h2 class="intro__en">ASK BETTER,<br>WORK LIGHTER.</h2>
-      <div class="intro__ja">
-        <p>ツールは毎月増える。<br>けれど、詰まるところはいつも同じだ。</p>
-        <p>何を任せて、何を自分で持つのか。<br>それを決めるのは、機能表ではなく<br>あなたの言葉のほうだ。</p>
-        <p>週にひとつ、問いを持ち帰る。<br>8回めには、金曜の夜が変わっている。</p>
+  <!-- ============ 特長 ============ -->
+  <section class="section" id="feature">
+    <div class="wrap">
+      <p class="eyebrow">この学校の特長</p>
+      <h2 class="h2">AIを実務で使うスキルと、<br>考え方を学ぶ学校です。</h2>
+
+      <div class="feats" data-reveal>
+        <article class="feat">
+          <svg class="feat__i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-spark"></use></svg>
+          <h3 class="feat__t">AI活用スキル</h3>
+          <p>実務に直結するスキルが身につきます。演習で作ったものは、そのまま職場で使えます。</p>
+        </article>
+        <article class="feat">
+          <svg class="feat__i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-laptop"></use></svg>
+          <h3 class="feat__t">実践的カリキュラム</h3>
+          <p>ケーススタディと演習が中心。聞くだけで終わらせず、その場で手を動かします。</p>
+        </article>
+        <article class="feat">
+          <svg class="feat__i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bulb"></use></svg>
+          <h3 class="feat__t">考え方・思考法</h3>
+          <p>ツールは入れ替わります。AI時代に必要な考え方を、体系立てて扱います。</p>
+        </article>
+        <article class="feat">
+          <svg class="feat__i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-people"></use></svg>
+          <h3 class="feat__t">仲間と学ぶ</h3>
+          <p>同じ志の30名と2日間を過ごします。初日の夜には懇親会（任意）もあります。</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ============ 全8回（プログラム） ============ -->
+  <!-- ============ 開催概要 ============ -->
+  <section class="section section--pale" id="outline">
+    <div class="wrap">
+      <p class="eyebrow">開催概要</p>
+      <h2 class="h2">東京駅周辺で、2日間。</h2>
+
+      <div class="outline" data-reveal>
+        <dl class="spec">
+          <div class="spec__row"><dt>日程</dt><dd><b>2026年7月27日（月）・28日（火）</b><br>2日間の集中講義</dd></div>
+          <div class="spec__row"><dt>時間</dt><dd>27日 13:00〜18:00（受付13:00／授業13:30〜）<br>28日 10:00〜18:00（昼休憩12:00〜13:00）</dd></div>
+          <div class="spec__row"><dt>会場</dt><dd>東京駅周辺を予定<br><span class="spec__note">詳細な住所とアクセスは、開催1週間前にLINEでお知らせします。</span></dd></div>
+          <div class="spec__row"><dt>定員</dt><dd><b>30名</b>（先着）<br><span class="spec__note">埋まり次第、締め切ります。</span></dd></div>
+          <div class="spec__row"><dt>受講料</dt><dd><b>44万円（税込）</b>／お一人<br><span class="spec__note">2026年6月30日までのお申し込みは先行価格 33万円（税込）。</span></dd></div>
+          <div class="spec__row"><dt>お支払い</dt><dd>銀行振込<br><span class="spec__note">お申し込み後にLINEで振込先をご案内します。請求書はご入力の会社名が宛名になります。</span></dd></div>
+          <div class="spec__row"><dt>懇親会</dt><dd>27日 18:30〜（任意参加）<br><span class="spec__note">会費6,000円。おつりが出ないよう、ぴったりご用意ください。</span></dd></div>
+          <div class="spec__row"><dt>主催</dt><dd>株式会社シュビヒロ</dd></div>
+        </dl>
+
+        <div class="bring">
+          <h3 class="bring__t">持ち物</h3>
+          <ul class="bring__list">
+            <li>
+              <svg class="bring__i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pc"></use></svg>
+              <span><b>ノートパソコン</b><small>必須</small></span>
+            </li>
+            <li>
+              <svg class="bring__i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-plug"></use></svg>
+              <span>充電器</span>
+            </li>
+            <li>
+              <svg class="bring__i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pen"></use></svg>
+              <span>筆記用具・ノート</span>
+            </li>
+          </ul>
+          <p class="bring__note">ずっと手を動かします。パソコンだけは忘れないでください。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ カリキュラム ============ -->
   <section class="section" id="curriculum">
     <div class="wrap">
       <div class="shead">
         <div>
-          <p class="eyebrow">PROGRAM ／ 全8回</p>
-          <h2 class="h2">8つの問いに、順番に答えていく。</h2>
+          <p class="eyebrow">カリキュラム ／ 全11章</p>
+          <h2 class="h2">考え方から、作れるところまで。</h2>
         </div>
-        <p class="shead__note">気になる回は <span class="inline-i" aria-hidden="true">✓</span> を押してください。<br>説明会でその回の話から始めます。</p>
+        <p class="shead__note">気になる章は <span class="inline-i" aria-hidden="true">✓</span> を押してください。<br>お問い合わせのときに、その章の話から始められます。</p>
       </div>
 
       <div class="filter" role="group" aria-label="カテゴリでしぼりこむ">
-        <button class="ftab is-on" type="button" data-cat="all" aria-pressed="true">すべて<span>8</span></button>
-        <button class="ftab" type="button" data-cat="base" aria-pressed="false">基礎<span>1</span></button>
-        <button class="ftab" type="button" data-cat="info" aria-pressed="false">情報<span>1</span></button>
-        <button class="ftab" type="button" data-cat="word" aria-pressed="false">ことば<span>1</span></button>
-        <button class="ftab" type="button" data-cat="data" aria-pressed="false">データ<span>1</span></button>
-        <button class="ftab" type="button" data-cat="deck" aria-pressed="false">資料<span>2</span></button>
-        <button class="ftab" type="button" data-cat="flow" aria-pressed="false">しくみ<span>2</span></button>
+        <button class="ftab is-on" type="button" data-cat="all" aria-pressed="true">すべて<span>11</span></button>
+        <button class="ftab" type="button" data-cat="mind" aria-pressed="false">考え方<span>1</span></button>
+        <button class="ftab" type="button" data-cat="base" aria-pressed="false">基礎<span>3</span></button>
+        <button class="ftab" type="button" data-cat="rule" aria-pressed="false">ルール<span>1</span></button>
+        <button class="ftab" type="button" data-cat="work" aria-pressed="false">演習<span>4</span></button>
+        <button class="ftab" type="button" data-cat="apply" aria-pressed="false">応用<span>2</span></button>
       </div>
 
       <ol class="progs" id="progs">
 
+        <li class="prog" data-cat="mind">
+          <div class="prog__head prog__head--mind">
+            <span class="prog__n">01</span>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"></use></svg>
+          </div>
+          <div class="prog__body">
+            <div class="prog__row">
+              <span class="tag tag--mind">考え方</span>
+              <button class="fav" type="button" data-fav="c1" aria-pressed="false">
+                <span aria-hidden="true">✓</span><span class="sr">第1章を気になるリストに入れる</span>
+              </button>
+            </div>
+            <h3 class="prog__t">AIで仕事はどう変わるか</h3>
+            <button class="more" type="button" aria-expanded="false" aria-controls="d1">くわしく見る</button>
+            <div class="prog__d" id="d1" hidden>
+              <p>時間削減と実行スピードという2つの軸で、AIを入れると仕事のどこが変わるのかを最初に揃えます。ここが合っていないと、後の演習が「面白かった」で終わります。</p>
+            </div>
+          </div>
+        </li>
+
         <li class="prog" data-cat="base">
-          <div class="prog__thumb prog__thumb--base">
-            <span class="prog__no">01</span>
-            <span class="prog__ghost" aria-hidden="true">?</span>
+          <div class="prog__head prog__head--base">
+            <span class="prog__n">02</span>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bulb"></use></svg>
           </div>
           <div class="prog__body">
             <div class="prog__row">
               <span class="tag tag--base">基礎</span>
-              <button class="fav" type="button" data-fav="l1" aria-pressed="false">
-                <span aria-hidden="true">✓</span><span class="sr">第1回を気になるリストに入れる</span>
+              <button class="fav" type="button" data-fav="c2" aria-pressed="false">
+                <span aria-hidden="true">✓</span><span class="sr">第2章を気になるリストに入れる</span>
               </button>
             </div>
-            <p class="prog__date">9.2<span>wed</span></p>
-            <h3 class="prog__t">何を頼めば、AIは正しく答えるか。</h3>
-            <button class="more" type="button" aria-expanded="false" aria-controls="d1">View More</button>
-            <div class="prog__d" id="d1" hidden>
-              <p>指示を「役割・前提・出力形式」の3要素に分解します。書き直しの回数が目に見えて減ります。</p>
-              <p class="prog__out"><span>持ち帰るもの</span>自分用のプロンプト雛形 3本</p>
-            </div>
-          </div>
-        </li>
-
-        <li class="prog" data-cat="info">
-          <div class="prog__thumb prog__thumb--info">
-            <span class="prog__no">02</span>
-            <span class="prog__ghost" aria-hidden="true">?</span>
-          </div>
-          <div class="prog__body">
-            <div class="prog__row">
-              <span class="tag tag--info">情報</span>
-              <button class="fav" type="button" data-fav="l2" aria-pressed="false">
-                <span aria-hidden="true">✓</span><span class="sr">第2回を気になるリストに入れる</span>
-              </button>
-            </div>
-            <p class="prog__date">9.9<span>wed</span></p>
-            <h3 class="prog__t">その情報は、信じていいか。</h3>
-            <button class="more" type="button" aria-expanded="false" aria-controls="d2">View More</button>
+            <h3 class="prog__t">生成AIの基礎</h3>
+            <button class="more" type="button" aria-expanded="false" aria-controls="d2">くわしく見る</button>
             <div class="prog__d" id="d2" hidden>
-              <p>下調べと要約。出典の確かめ方と、鵜呑みにしないための手順を自分用に決めます。</p>
-              <p class="prog__out"><span>持ち帰るもの</span>調査メモのテンプレート</p>
+              <p>どういう仕組みで答えが出てくるのか。そのうえで押さえるべき3つの注意点を扱います。ハルシネーションへの向き合い方もここです。</p>
             </div>
           </div>
         </li>
 
-        <li class="prog" data-cat="word">
-          <div class="prog__thumb prog__thumb--word">
-            <span class="prog__no">03</span>
-            <span class="prog__ghost" aria-hidden="true">?</span>
+        <li class="prog" data-cat="base">
+          <div class="prog__head prog__head--base">
+            <span class="prog__n">03</span>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-grid"></use></svg>
           </div>
           <div class="prog__body">
             <div class="prog__row">
-              <span class="tag tag--word">ことば</span>
-              <button class="fav" type="button" data-fav="l3" aria-pressed="false">
-                <span aria-hidden="true">✓</span><span class="sr">第3回を気になるリストに入れる</span>
+              <span class="tag tag--base">基礎</span>
+              <button class="fav" type="button" data-fav="c3" aria-pressed="false">
+                <span aria-hidden="true">✓</span><span class="sr">第3章を気になるリストに入れる</span>
               </button>
             </div>
-            <p class="prog__date">9.16<span>wed</span></p>
-            <h3 class="prog__t">その文章は、誰が読むか。</h3>
-            <button class="more" type="button" aria-expanded="false" aria-controls="d3">View More</button>
+            <h3 class="prog__t">AIツールの全体像</h3>
+            <button class="more" type="button" aria-expanded="false" aria-controls="d3">くわしく見る</button>
             <div class="prog__d" id="d3" hidden>
-              <p>メール・議事録・企画書を、読み手に合わせて書き分けます。文体の指示語を揃えます。</p>
-              <p class="prog__out"><span>持ち帰るもの</span>文体ガイド 1枚</p>
+              <p>ツール名から覚えると、増えるたびに振り回されます。目的から選べるように、全体像を地図として持ちます。</p>
             </div>
           </div>
         </li>
 
-        <li class="prog" data-cat="data">
-          <div class="prog__thumb prog__thumb--data">
-            <span class="prog__no">04</span>
-            <span class="prog__ghost" aria-hidden="true">?</span>
+        <li class="prog" data-cat="base">
+          <div class="prog__head prog__head--base">
+            <span class="prog__n">04</span>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-book"></use></svg>
           </div>
           <div class="prog__body">
             <div class="prog__row">
-              <span class="tag tag--data">データ</span>
-              <button class="fav" type="button" data-fav="l4" aria-pressed="false">
-                <span aria-hidden="true">✓</span><span class="sr">第4回を気になるリストに入れる</span>
+              <span class="tag tag--base">基礎</span>
+              <button class="fav" type="button" data-fav="c4" aria-pressed="false">
+                <span aria-hidden="true">✓</span><span class="sr">第4章を気になるリストに入れる</span>
               </button>
             </div>
-            <p class="prog__date">9.23<span>wed</span></p>
-            <h3 class="prog__t">この数字は、何を言っているか。</h3>
-            <button class="more" type="button" aria-expanded="false" aria-controls="d4">View More</button>
+            <h3 class="prog__t">AI専門用語集</h3>
+            <button class="more" type="button" aria-expanded="false" aria-controls="d4">くわしく見る</button>
             <div class="prog__d" id="d4" hidden>
-              <p>表計算とデータ整理。集計・分類・要約のうち、AIに任せる範囲と任せない範囲を線引きします。</p>
-              <p class="prog__out"><span>持ち帰るもの</span>集計手順シート</p>
+              <p>プロンプト、コンテキスト、エンバイロメント。この先どんな記事を読んでも詰まらないように、言葉の意味を先に通します。</p>
             </div>
           </div>
         </li>
 
-        <li class="prog" data-cat="deck">
-          <div class="prog__thumb prog__thumb--deck">
-            <span class="prog__no">05</span>
-            <span class="prog__ghost" aria-hidden="true">?</span>
+        <li class="prog" data-cat="rule">
+          <div class="prog__head prog__head--rule">
+            <span class="prog__n">05</span>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-shield"></use></svg>
           </div>
           <div class="prog__body">
             <div class="prog__row">
-              <span class="tag tag--deck">資料</span>
-              <button class="fav" type="button" data-fav="l5" aria-pressed="false">
-                <span aria-hidden="true">✓</span><span class="sr">第5回を気になるリストに入れる</span>
+              <span class="tag tag--rule">ルール</span>
+              <button class="fav" type="button" data-fav="c5" aria-pressed="false">
+                <span aria-hidden="true">✓</span><span class="sr">第5章を気になるリストに入れる</span>
               </button>
             </div>
-            <p class="prog__date">9.30<span>wed</span></p>
-            <h3 class="prog__t">一目で伝わる資料とは。</h3>
-            <button class="more" type="button" aria-expanded="false" aria-controls="d5">View More</button>
+            <h3 class="prog__t">AI利用ルールとリスク管理</h3>
+            <button class="more" type="button" aria-expanded="false" aria-controls="d5">くわしく見る</button>
             <div class="prog__d" id="d5" hidden>
-              <p>スライド構成と画像生成。見た目より先に、伝える順番を決めてから作ります。</p>
-              <p class="prog__out"><span>持ち帰るもの</span>提案資料のドラフト</p>
+              <p>秘密情報の扱い（.env）、データの匿名化、権限の切り分け。会社で使うために、先に線を引いておく回です。</p>
             </div>
           </div>
         </li>
 
-        <li class="prog" data-cat="flow">
-          <div class="prog__thumb prog__thumb--flow">
-            <span class="prog__no">06</span>
-            <span class="prog__ghost" aria-hidden="true">?</span>
+        <li class="prog" data-cat="work">
+          <div class="prog__head prog__head--work">
+            <span class="prog__n">06</span>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chat"></use></svg>
           </div>
           <div class="prog__body">
             <div class="prog__row">
-              <span class="tag tag--flow">しくみ</span>
-              <button class="fav" type="button" data-fav="l6" aria-pressed="false">
-                <span aria-hidden="true">✓</span><span class="sr">第6回を気になるリストに入れる</span>
+              <span class="tag tag--work">演習</span>
+              <button class="fav" type="button" data-fav="c6" aria-pressed="false">
+                <span aria-hidden="true">✓</span><span class="sr">第6章を気になるリストに入れる</span>
               </button>
             </div>
-            <p class="prog__date">10.7<span>wed</span></p>
-            <h3 class="prog__t">自分の仕事は、どこで詰まるか。</h3>
-            <button class="more" type="button" aria-expanded="false" aria-controls="d6">View More</button>
+            <h3 class="prog__t">プロンプトエンジニアリング演習</h3>
+            <button class="more" type="button" aria-expanded="false" aria-controls="d6">くわしく見る</button>
             <div class="prog__d" id="d6" hidden>
-              <p>1週間の業務を棚卸しして、AIに渡せる工程と、人が持つべき工程を切り分けます。</p>
-              <p class="prog__out"><span>持ち帰るもの</span>業務分解マップ</p>
+              <p>営業メール、SNS投稿、業務マニュアル。実際の題材で書いて、直して、比べます。書き直しの回数が減る書き方を身体で覚えます。</p>
             </div>
           </div>
         </li>
 
-        <li class="prog" data-cat="flow">
-          <div class="prog__thumb prog__thumb--flow">
-            <span class="prog__no">07</span>
-            <span class="prog__ghost" aria-hidden="true">?</span>
+        <li class="prog" data-cat="apply">
+          <div class="prog__head prog__head--apply">
+            <span class="prog__n">07</span>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-map"></use></svg>
           </div>
           <div class="prog__body">
             <div class="prog__row">
-              <span class="tag tag--flow">しくみ</span>
-              <button class="fav" type="button" data-fav="l7" aria-pressed="false">
-                <span aria-hidden="true">✓</span><span class="sr">第7回を気になるリストに入れる</span>
+              <span class="tag tag--apply">応用</span>
+              <button class="fav" type="button" data-fav="c7" aria-pressed="false">
+                <span aria-hidden="true">✓</span><span class="sr">第7章を気になるリストに入れる</span>
               </button>
             </div>
-            <p class="prog__date">10.14<span>wed</span></p>
-            <h3 class="prog__t">同じ作業を、二度やらないためには。</h3>
-            <button class="more" type="button" aria-expanded="false" aria-controls="d7">View More</button>
+            <h3 class="prog__t">業務別AI活用設計（50事例）</h3>
+            <button class="more" type="button" aria-expanded="false" aria-controls="d7">くわしく見る</button>
             <div class="prog__d" id="d7" hidden>
-              <p>固まった手順を GPTs や定型ワークフローに載せ替え、毎回書かなくていい状態にします。</p>
-              <p class="prog__out"><span>持ち帰るもの</span>自分専用のAIツール 1つ</p>
+              <p>営業、経理、人事、制作。職種別に50の事例を見て、自分の業務に一番近いものから設計に落とします。</p>
             </div>
           </div>
         </li>
 
-        <li class="prog" data-cat="deck">
-          <div class="prog__thumb prog__thumb--deck">
-            <span class="prog__no">08</span>
-            <span class="prog__ghost" aria-hidden="true">?</span>
+        <li class="prog" data-cat="work">
+          <div class="prog__head prog__head--work">
+            <span class="prog__n">08</span>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-slide"></use></svg>
           </div>
           <div class="prog__body">
             <div class="prog__row">
-              <span class="tag tag--deck">資料</span>
-              <button class="fav" type="button" data-fav="l8" aria-pressed="false">
-                <span aria-hidden="true">✓</span><span class="sr">第8回を気になるリストに入れる</span>
+              <span class="tag tag--work">演習</span>
+              <button class="fav" type="button" data-fav="c8" aria-pressed="false">
+                <span aria-hidden="true">✓</span><span class="sr">第8章を気になるリストに入れる</span>
               </button>
             </div>
-            <p class="prog__date">10.21<span>wed</span></p>
-            <h3 class="prog__t">結局、何が置き換わったか。</h3>
-            <button class="more" type="button" aria-expanded="false" aria-controls="d8">View More</button>
+            <h3 class="prog__t">実践演習：スライド作成</h3>
+            <button class="more" type="button" aria-expanded="false" aria-controls="d8">くわしく見る</button>
             <div class="prog__d" id="d8" hidden>
-              <p>卒業制作。実務を1つ選んで置き換え、かかった時間の前後を添えて発表します。</p>
-              <p class="prog__out"><span>持ち帰るもの</span>発表資料と before / after</p>
+              <p>提案資料を1本、その場で作ります。見た目より先に、伝える順番を決めてから組み立てます。</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="prog" data-cat="work">
+          <div class="prog__head prog__head--work">
+            <span class="prog__n">09</span>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-browser"></use></svg>
+          </div>
+          <div class="prog__body">
+            <div class="prog__row">
+              <span class="tag tag--work">演習</span>
+              <button class="fav" type="button" data-fav="c9" aria-pressed="false">
+                <span aria-hidden="true">✓</span><span class="sr">第9章を気になるリストに入れる</span>
+              </button>
+            </div>
+            <h3 class="prog__t">実践演習：LP作成</h3>
+            <button class="more" type="button" aria-expanded="false" aria-controls="d9">くわしく見る</button>
+            <div class="prog__d" id="d9" hidden>
+              <p>ランディングページを1枚作って、公開まで通します。Claude Code と GitHub の環境構築もここで一緒に済ませます。</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="prog" data-cat="work">
+          <div class="prog__head prog__head--work">
+            <span class="prog__n">10</span>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-gear"></use></svg>
+          </div>
+          <div class="prog__body">
+            <div class="prog__row">
+              <span class="tag tag--work">演習</span>
+              <button class="fav" type="button" data-fav="c10" aria-pressed="false">
+                <span aria-hidden="true">✓</span><span class="sr">第10章を気になるリストに入れる</span>
+              </button>
+            </div>
+            <h3 class="prog__t">実践演習：LINE連携ツール</h3>
+            <button class="more" type="button" aria-expanded="false" aria-controls="d10">くわしく見る</button>
+            <div class="prog__d" id="d10" hidden>
+              <p>お客さまとの接点を自動で回すしくみを作ります。手で送っていた連絡を、仕組みに置き換えるところまで。</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="prog" data-cat="apply">
+          <div class="prog__head prog__head--apply">
+            <span class="prog__n">11</span>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-flag"></use></svg>
+          </div>
+          <div class="prog__body">
+            <div class="prog__row">
+              <span class="tag tag--apply">応用</span>
+              <button class="fav" type="button" data-fav="c11" aria-pressed="false">
+                <span aria-hidden="true">✓</span><span class="sr">第11章を気になるリストに入れる</span>
+              </button>
+            </div>
+            <h3 class="prog__t">自社事業への応用ワーク</h3>
+            <button class="more" type="button" aria-expanded="false" aria-controls="d11">くわしく見る</button>
+            <div class="prog__d" id="d11" hidden>
+              <p>最後は自分の事業に戻します。2日間で扱ったものを、どこから自社に入れるか。持ち帰る順番を決めて終わります。</p>
             </div>
           </div>
         </li>
 
       </ol>
 
-      <p class="empty" id="empty" hidden>該当する回がありません。</p>
+      <p class="empty" id="empty" hidden>該当する章がありません。</p>
     </div>
   </section>
 
-  <!-- ============ 日程 ============ -->
-  <section class="section section--band" id="schedule">
+  <!-- ============ 当日の流れ ============ -->
+  <section class="section section--pale" id="timetable">
     <div class="wrap">
-      <p class="eyebrow">SCHEDULE ／ 2026年 秋期</p>
-      <h2 class="h2">毎週水曜、夜の90分。</h2>
-      <p class="lead">19:30〜21:00。当日はオンラインで集まります。来られない回は、その日のうちに録画を配信します。</p>
+      <p class="eyebrow">当日の流れ</p>
+      <h2 class="h2">タイムテーブル。</h2>
+      <p class="lead">スケジュールは変更になる場合があります。最新のご案内はLINEでお送りします。</p>
 
-      <ol class="cal" data-reveal>
-        <li class="cal__row"><span class="cal__d">9.2</span><span class="cal__w">wed</span><span class="cal__t">何を頼めば、AIは正しく答えるか。</span><span class="tag tag--base">基礎</span></li>
-        <li class="cal__row"><span class="cal__d">9.9</span><span class="cal__w">wed</span><span class="cal__t">その情報は、信じていいか。</span><span class="tag tag--info">情報</span></li>
-        <li class="cal__row"><span class="cal__d">9.16</span><span class="cal__w">wed</span><span class="cal__t">その文章は、誰が読むか。</span><span class="tag tag--word">ことば</span></li>
-        <li class="cal__row"><span class="cal__d">9.23</span><span class="cal__w">wed</span><span class="cal__t">この数字は、何を言っているか。</span><span class="tag tag--data">データ</span></li>
-        <li class="cal__row"><span class="cal__d">9.30</span><span class="cal__w">wed</span><span class="cal__t">一目で伝わる資料とは。</span><span class="tag tag--deck">資料</span></li>
-        <li class="cal__row"><span class="cal__d">10.7</span><span class="cal__w">wed</span><span class="cal__t">自分の仕事は、どこで詰まるか。</span><span class="tag tag--flow">しくみ</span></li>
-        <li class="cal__row"><span class="cal__d">10.14</span><span class="cal__w">wed</span><span class="cal__t">同じ作業を、二度やらないためには。</span><span class="tag tag--flow">しくみ</span></li>
-        <li class="cal__row cal__row--last"><span class="cal__d">10.21</span><span class="cal__w">wed</span><span class="cal__t">結局、何が置き換わったか。</span><span class="tag tag--deck">資料</span></li>
-      </ol>
+      <div class="days" data-reveal>
+        <section class="day">
+          <h3 class="day__h"><span class="day__n">DAY 1</span>7月27日（月）</h3>
+          <ol class="tt">
+            <li><span class="tt__time">13:00</span><span class="tt__what">受付開始・開校式</span></li>
+            <li><span class="tt__time">13:30</span><span class="tt__what">授業開始</span></li>
+            <li><span class="tt__time">18:00</span><span class="tt__what">授業終了</span></li>
+            <li class="tt--opt"><span class="tt__time">18:30〜</span><span class="tt__what">懇親会（任意参加・会費6,000円）</span></li>
+          </ol>
+        </section>
+
+        <section class="day">
+          <h3 class="day__h"><span class="day__n">DAY 2</span>7月28日（火）</h3>
+          <ol class="tt">
+            <li><span class="tt__time">10:00</span><span class="tt__what">授業開始</span></li>
+            <li><span class="tt__time">12:00</span><span class="tt__what">昼休憩</span></li>
+            <li><span class="tt__time">13:00</span><span class="tt__what">午後の授業</span></li>
+            <li><span class="tt__time">18:00</span><span class="tt__what">授業終了・閉校式</span></li>
+          </ol>
+        </section>
+      </div>
     </div>
   </section>
 
-  <!-- ============ 進め方 ============ -->
-  <section class="section" id="flow">
+  <!-- ============ 受講前後のサポート ============ -->
+  <section class="section" id="support">
     <div class="wrap">
-      <p class="eyebrow">HOW IT GOES ／ 進め方</p>
-      <h2 class="h2">申し込みから卒業まで、4つだけ。</h2>
+      <p class="eyebrow">受講の前と後</p>
+      <h2 class="h2">2日間だけで、放り出しません。</h2>
 
       <ol class="steps" data-reveal>
         <li class="step">
-          <p class="step__no">01</p>
-          <h3 class="step__t">説明会に申し込む</h3>
-          <p>希望日を選んで送信。所要3分、費用はかかりません。</p>
+          <p class="step__no">1</p>
+          <h3 class="step__t">AI理解度チェック</h3>
+          <p>受講前に、6問のクイズで現在地を確かめます。用語の意味も解説つきで確認できます。</p>
         </li>
         <li class="step">
-          <p class="step__no">02</p>
-          <h3 class="step__t">60分、話す</h3>
-          <p>いまの業務と、減らしたい時間を伺います。合わないと思ったらその場で言います。</p>
+          <p class="step__no">2</p>
+          <h3 class="step__t">予習コンテンツ</h3>
+          <p>事前学習の動画と資料をLINEでお届けします。当日の理解が変わります。</p>
         </li>
         <li class="step">
-          <p class="step__no">03</p>
-          <h3 class="step__t">週1回、持ち込む</h3>
-          <p>宿題はあなたの仕事そのもの。毎週ひとつ持ってきてください。</p>
+          <p class="step__no">3</p>
+          <h3 class="step__t">LINEで質問</h3>
+          <p>授業内容・ツールの使い方・持ち物。いつでも送ってください。講師が授業内かLINEで答えます。</p>
         </li>
         <li class="step">
-          <p class="step__no">04</p>
-          <h3 class="step__t">手順が残る</h3>
-          <p>作った手順書とツールはあなたのもの。教材と録画は卒業後も見られます。</p>
+          <p class="step__no">4</p>
+          <h3 class="step__t">受講後アンケート</h3>
+          <p>役に立った章と足りなかった章を伺い、次の期の内容に反映します。</p>
         </li>
       </ol>
+    </div>
+  </section>
+
+  <!-- ============ 受講料 ============ -->
+  <section class="section section--pale" id="price">
+    <div class="wrap">
+      <p class="eyebrow">受講料</p>
+      <h2 class="h2">同じ2日間で、税込11万円の差。</h2>
+      <p class="lead">お申し込みのタイミングで金額が変わります。お支払いは銀行振込です。複数名でのお申し込みもできます。</p>
+
+      <div class="plans" data-reveal>
+        <article class="plan">
+          <p class="plan__when">2026年6月30日まで</p>
+          <h3 class="plan__name">先行価格</h3>
+          <p class="plan__price"><span class="plan__num">33</span><span class="plan__unit">万円<small>税込</small></span></p>
+          <p class="plan__desc">受付は終了しました。</p>
+        </article>
+
+        <article class="plan plan--now">
+          <p class="plan__tag">現在の価格</p>
+          <p class="plan__when">2026年7月1日から</p>
+          <h3 class="plan__name">通常価格</h3>
+          <p class="plan__price"><span class="plan__num">44</span><span class="plan__unit">万円<small>税込</small></span></p>
+          <p class="plan__desc">お一人あたりの金額です。</p>
+          <ul class="plan__list">
+            <li>2日間の集中講義（全11章）</li>
+            <li>予習コンテンツ・AI理解度チェック</li>
+            <li>LINEでの質問対応</li>
+            <li>請求書を発行（宛名はご入力の会社名）</li>
+          </ul>
+          <a class="btn btn--full" href="#apply">申し込みフォームへ</a>
+        </article>
+      </div>
+
+      <p class="note" data-reveal>懇親会（27日 18:30〜／任意参加）は別途、会費6,000円です。当日ぴったりの金額でご用意ください。</p>
     </div>
   </section>
 
   <!-- ============ 主催 ============ -->
   <!-- TODO: 氏名・肩書き・プロフィール本文は本人の情報に差し替える -->
-  <section class="section section--ink" id="organizer">
+  <section class="section section--navy" id="organizer">
     <div class="wrap">
-      <p class="eyebrow eyebrow--light">ORGANIZER ／ 主催</p>
+      <p class="eyebrow eyebrow--light">主催</p>
 
       <div class="org" data-reveal>
         <div class="org__pic">
           <img src="images/organizer.jpg" width="360" height="360" alt="主催者・三原拓斗の顔写真" loading="lazy" decoding="async">
         </div>
         <div class="org__body">
-          <h2 class="org__name">三原 拓斗<span class="org__en">MIHARA TAKUTO</span></h2>
-          <p class="org__role">問学舎 主催 ／ 講師</p>
+          <h2 class="org__name">三原 拓斗</h2>
+          <p class="org__role">AIの学校 主催 ／ 株式会社シュビヒロ</p>
           <p class="org__text">
-            自分の業務を生成AIに渡していく作業を、毎日ふつうにやっています。うまくいった手順も、そうでもなかった手順も、
+            自分の業務をAIに渡していく作業を、毎日ふつうにやっています。うまくいった手順も、そうでもなかった手順も、
             そのまま教材にしています。<br>
-            この講座で扱うのは、目新しい機能ではなく「来週から使える形にして残すこと」です。
+            この2日間で扱うのは目新しい機能ではなく、「来週から使える形にして持ち帰ること」です。
           </p>
           <ul class="org__pts">
-            <li>教えるのは操作より先に、問いの立て方</li>
-            <li>毎回、受講者の実務を1つ持ち込んで進めます</li>
-            <li>合わないと思ったら説明会で正直に伝えます</li>
+            <li>教えるのは操作より先に、考え方と用語</li>
+            <li>演習で作ったものは、そのまま職場で使えます</li>
+            <li>合わないと思ったら、申し込み前に正直にお伝えします</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ 受講生の声 ============ -->
-  <!-- ダミー：演習用のサンプルテキスト。実案件では許諾つきの声に差し替える -->
-  <section class="section section--band" id="voices">
-    <div class="wrap">
-      <p class="eyebrow">VOICES ／ 受講生の声</p>
-      <h2 class="h2">8週間で、何が変わったか。</h2>
-      <p class="lead lead--tight">※ 以下は制作演習用のサンプルです。実在の受講生の声ではありません。</p>
-
-      <div class="voices" data-reveal>
-        <figure class="voice voice--a">
-          <blockquote><p>議事録の清書に毎回40分。いまは録音を渡して10分見るだけです。浮いた時間で先に提案書を書いています。</p></blockquote>
-          <figcaption>営業 ／ 30代<span>3期</span></figcaption>
-        </figure>
-        <figure class="voice voice--b">
-          <blockquote><p>プロンプトという言葉すら知りませんでした。第6回で1週間を書き出したとき、任せられる作業がこんなにあるのかと。</p></blockquote>
-          <figcaption>総務 ／ 40代<span>2期</span></figcaption>
-        </figure>
-        <figure class="voice voice--c">
-          <blockquote><p>いちばん効いたのは手順書を残す習慣。同じ指示を書き直さなくなり、チームにも配れるようになりました。</p></blockquote>
-          <figcaption>企画 ／ 30代<span>3期</span></figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 料金 ============ -->
-  <section class="section" id="price">
-    <div class="wrap">
-      <p class="eyebrow">PRICE ／ 料金</p>
-      <h2 class="h2">プランは2つ。</h2>
-      <p class="lead">どちらも全8回・録画・教材つき。ひとりで詰まりやすい人は実践プランのほうが早いです。</p>
-
-      <div class="plans" data-reveal>
-        <article class="plan">
-          <h3 class="plan__name">ベーシック</h3>
-          <p class="plan__price"><span class="plan__num">198,000</span><span class="plan__unit">円<small>税込</small></span></p>
-          <p class="plan__desc">グループ受講だけで完結するプラン。</p>
-          <ul class="plan__list">
-            <li>全8回（週1回90分）</li>
-            <li>定員12名のグループ講義</li>
-            <li>教材・録画（卒業後も閲覧可）</li>
-            <li>手順書テンプレート一式</li>
-          </ul>
-          <a class="btn btn--line btn--full" href="#apply">説明会で相談する</a>
-        </article>
-
-        <article class="plan plan--pick">
-          <p class="plan__tag">個別相談つき</p>
-          <h3 class="plan__name">実践</h3>
-          <p class="plan__price"><span class="plan__num">298,000</span><span class="plan__unit">円<small>税込</small></span></p>
-          <p class="plan__desc">自分の業務に踏み込んで作り切りたい人へ。</p>
-          <ul class="plan__list">
-            <li>ベーシックのすべて</li>
-            <li>個別面談 全4回（各45分）</li>
-            <li>卒業後3か月の質問対応</li>
-            <li>業務分解マップの添削</li>
-          </ul>
-          <a class="btn btn--full" href="#apply">説明会で相談する</a>
-        </article>
-      </div>
-
-      <p class="note" data-reveal>分割払い（3回・6回）に対応。法人払いは請求書を発行します。開講7日前までのキャンセルは全額返金です。</p>
-    </div>
-  </section>
-
-  <!-- ============ Q&A ============ -->
+  <!-- ============ よくある質問 ============ -->
   <section class="section" id="faq">
     <div class="wrap wrap--narrow">
-      <p class="eyebrow">Q&amp;A ／ よくある質問</p>
+      <p class="eyebrow">よくある質問</p>
       <h2 class="h2">先に答えておきます。</h2>
 
       <div class="faq" data-reveal>
         <details class="qa">
           <summary>AIを使ったことがありません。ついていけますか。</summary>
-          <p>第1回はアカウントの作成から始めます。申込時点で「ほとんど使っていない」人がいちばん多いです。</p>
+          <p>大丈夫です。第2章の「生成AIの基礎」から積み上げます。受講前にAI理解度チェックと予習コンテンツをお送りしますので、そこから始めてください。</p>
         </details>
         <details class="qa">
-          <summary>参加できない回が出そうです。</summary>
-          <p>当日中に録画を配信します。宿題は次回までに出せば進行に影響しません。</p>
+          <summary>パソコンは必ず必要ですか。</summary>
+          <p>必須です。2日間ずっと手を動かします。充電器も一緒にお持ちください。</p>
         </details>
         <details class="qa">
-          <summary>会社のPCで受講できますか。</summary>
-          <p>ブラウザだけで完結します。生成AIへのアクセスが社内で制限されている場合は、説明会で運用方法を一緒に確認します。</p>
+          <summary>プログラミングの経験がなくても平気ですか。</summary>
+          <p>平気です。第9章でClaude CodeとGitHubの環境構築を扱いますが、その場で一緒に進めます。コードを覚えて帰る講座ではありません。</p>
         </details>
         <details class="qa">
-          <summary>有料プランの契約は必要ですか。</summary>
-          <p>第4回以降は有料プラン（月額20ドル前後）があるとスムーズです。無料枠だけで進める方法も案内します。</p>
-        </details>
-        <details class="qa">
-          <summary>プログラミングは扱いますか。</summary>
-          <p>扱いません。コードを書かずに済む範囲で、業務を自動化するところまで進みます。</p>
+          <summary>会場はどこですか。</summary>
+          <p>東京駅周辺を予定しています。詳細な住所とアクセスは、開催1週間前にLINEでお知らせします。</p>
         </details>
         <details class="qa">
           <summary>支払い方法を教えてください。</summary>
-          <p>クレジットカード、銀行振込、請求書払いに対応しています。</p>
+          <p>銀行振込です。お申し込み後にLINEで振込先をご案内します。請求書はフォームにご入力いただいた会社名が宛名になります。個人の場合は個人名をご入力ください。</p>
+        </details>
+        <details class="qa">
+          <summary>会社から複数名で参加できますか。</summary>
+          <p>できます。お申し込みフォームで参加人数をご入力ください。人数分の金額をまとめた請求書を発行します。</p>
+        </details>
+        <details class="qa">
+          <summary>懇親会には必ず出ないといけませんか。</summary>
+          <p>任意参加です。初日18:30からで、会費は6,000円。出席しない場合の受講料は変わりません。</p>
+        </details>
+        <details class="qa">
+          <summary>途中で参加できない時間があります。</summary>
+          <p>お申し込み前にLINEでご相談ください。2日間そろっての参加を前提に組んでいるため、内容によってご案内が変わります。</p>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- ============ CTA ============ -->
+  <!-- ============ 申し込み ============ -->
   <section class="apply" id="apply">
-    <div class="blobs" aria-hidden="true">
-      <span class="blob blob--3"></span>
-      <span class="q q--4">?</span>
-    </div>
     <div class="wrap wrap--narrow apply__inner">
-      <p class="eyebrow eyebrow--light">FREE SESSION ／ 無料説明会</p>
-      <h2 class="apply__h">まず、いまの仕事を<br>聞かせてください。</h2>
+      <p class="eyebrow eyebrow--light">お申し込み</p>
+      <h2 class="apply__h">定員30名、先着です。</h2>
       <p class="apply__lead">
-        60分のオンライン面談です。受講を決めていなくても構いません。
-        次回開講は <b>9月2日（水）</b>、残り <b>4席</b>。
+        フォームは3分で終わります。迷っている段階なら、まずLINEで質問だけでも構いません。
       </p>
-      <!-- TODO: 申込フォームのURLに差し替える -->
-      <a class="btn btn--lg btn--white" href="https://example.com/entry">無料説明会に申し込む</a>
-      <p class="apply__note">所要3分 ／ しつこい勧誘はしません</p>
+      <div class="apply__btns">
+        <!-- TODO: 申し込みフォームの実URLに差し替える -->
+        <a class="btn btn--lg" href="https://example.com/form">申し込みフォームへ</a>
+        <!-- TODO: LINE公式アカウントの友だち追加URLに差し替える -->
+        <a class="btn btn--lg btn--ghost" href="https://example.com/line">LINEで質問する</a>
+      </div>
+      <p class="apply__note">お申し込み後、LINEで振込先と当日のご案内をお送りします</p>
     </div>
   </section>
 
 </main>
 
-<!-- 気になる回のバー -->
+<!-- 気になる章のバー -->
 <div class="pickbar" id="pickbar" hidden>
-  <p class="pickbar__t">気になる回が <b id="pickbarNum">0</b> つ</p>
-  <a class="btn btn--sm" href="#apply">この回の話から始める</a>
+  <p class="pickbar__t">気になる章が <b id="pickbarNum">0</b> つ</p>
+  <a class="btn btn--sm" href="#apply">この章について聞く</a>
   <button class="pickbar__x" type="button" id="pickbarX" aria-label="バーを閉じる">✕</button>
 </div>
 
@@ -550,32 +683,32 @@
   <div class="wrap foot__inner">
     <div class="foot__brand">
       <a class="logo logo--foot" href="#top">
-        <span class="logo__mark" aria-hidden="true">?</span>
+        <span class="logo__mark" aria-hidden="true">AI</span>
         <span class="logo__text">
-          <span class="logo__ja">問学舎</span>
-          <span class="logo__en">MONGAKUSHA</span>
+          <span class="logo__name">AIの学校</span>
+          <span class="logo__sub">株式会社シュビヒロ主催</span>
         </span>
       </a>
-      <p class="foot__tag">AIに、何を訊く？</p>
+      <p class="foot__tag">オフラインの実践講義で、<br>AIを実務で使うスキルと考え方を。</p>
     </div>
 
     <nav class="foot__nav" aria-label="フッターメニュー">
       <ul>
-        <li><a href="#intro">はじめに</a></li>
-        <li><a href="#curriculum">全8回</a></li>
-        <li><a href="#schedule">日程</a></li>
-        <li><a href="#flow">進め方</a></li>
+        <li><a href="#feature">特長</a></li>
+        <li><a href="#outline">開催概要</a></li>
+        <li><a href="#curriculum">カリキュラム</a></li>
+        <li><a href="#timetable">当日の流れ</a></li>
+        <li><a href="#support">受講の前と後</a></li>
+        <li><a href="#price">受講料</a></li>
         <li><a href="#organizer">主催</a></li>
-        <li><a href="#price">料金</a></li>
-        <li><a href="#faq">Q&amp;A</a></li>
-        <li><a href="#apply">説明会</a></li>
+        <li><a href="#faq">よくある質問</a></li>
       </ul>
     </nav>
   </div>
 
   <div class="wrap foot__bottom">
-    <p class="foot__disclaimer">本ページはLP制作演習用のサンプルです。学校名・受講生の声・料金・日程は架空のものです。</p>
-    <a class="totop" href="#top">PAGE TOP <span aria-hidden="true">↑</span></a>
+    <p class="foot__disclaimer">本ページはLP制作演習として作成したものです。掲載内容は運営資料をもとにしていますが、正式な募集ページではありません。申し込み先とLINEのリンクは差し替え前のダミーです。</p>
+    <a class="totop" href="#top">ページ上部へ <span aria-hidden="true">↑</span></a>
   </div>
 </footer>
 
