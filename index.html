@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>問学舎（もんがくしゃ）｜非エンジニアのための実務AI講座・全8回</title>
-<meta name="description" content="ツールの操作ではなく、自分の仕事をAIに渡せる形に分解する力を8回で身につけるオンライン講座。週1回90分・定員12名。無料説明会を受付中です。">
-<meta name="theme-color" content="#101A30">
+<title>問学舎（もんがくしゃ）｜AIに、何を訊く？ 非エンジニアのための実務AI講座・全8回</title>
+<meta name="description" content="AIに何を訊くか、で仕事は変わる。非エンジニアのための実務AI講座。全8回・週1回90分・オンライン・定員12名。9月2日開講、無料説明会を受付中です。">
+<meta name="theme-color" content="#17143a">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:site_name" content="問学舎">
-<meta property="og:title" content="問学舎｜AIに、何を訊くか。">
-<meta property="og:description" content="非エンジニアのための実務AI講座。全8回・週1回90分・オンライン・定員12名。">
-<!-- TODO: og:image（1200×630）を用意したら images/ に置いて絶対URLで指定する -->
+<meta property="og:title" content="問学舎｜AIに、何を訊く？">
+<meta property="og:description" content="非エンジニアのための実務AI講座。全8回・週1回90分・オンライン・定員12名。9月2日開講。">
+<!-- TODO: og:image（1200×630）を作って images/ に置き、絶対URLで指定する -->
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23101A30'/%3E%3Ctext x='16' y='24' font-size='21' text-anchor='middle' fill='%23E0A32E' font-family='serif'%3E%E5%95%8F%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238b3df5'/%3E%3Cstop offset='1' stop-color='%23ff4d9e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Ctext x='16' y='24' font-size='22' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='bold'%3E%3F%3C/text%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -29,7 +29,7 @@
 <header class="head" id="head">
   <div class="head__inner">
     <a class="logo" href="#top">
-      <span class="logo__mark" aria-hidden="true">問</span>
+      <span class="logo__mark" aria-hidden="true">?</span>
       <span class="logo__text">
         <span class="logo__ja">問学舎</span>
         <span class="logo__en">MONGAKUSHA</span>
@@ -38,16 +38,22 @@
 
     <nav class="nav" id="nav" aria-label="メインメニュー">
       <ul class="nav__list">
-        <li><a href="#about">考え方</a></li>
-        <li><a href="#curriculum">カリキュラム</a></li>
-        <li><a href="#flow">受講の流れ</a></li>
-        <li><a href="#teachers">講師</a></li>
+        <li><a href="#intro">はじめに</a></li>
+        <li><a href="#curriculum">全8回</a></li>
+        <li><a href="#schedule">日程</a></li>
+        <li><a href="#organizer">主催</a></li>
         <li><a href="#price">料金</a></li>
-        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#faq">Q&amp;A</a></li>
       </ul>
     </nav>
 
-    <a class="btn btn--sm head__cta" href="#apply">無料説明会に申し込む</a>
+    <a class="pick" href="#curriculum" id="pickChip">
+      <span class="pick__i" aria-hidden="true">✓</span>
+      <span class="pick__label">気になる回</span>
+      <span class="pick__num" id="pickNum">0</span>
+    </a>
+
+    <a class="btn btn--sm head__cta" href="#apply">説明会に申し込む</a>
 
     <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="メニューを開く">
       <span class="burger__bar" aria-hidden="true"></span>
@@ -60,236 +66,378 @@
 
   <!-- ============ ヒーロー ============ -->
   <section class="hero" id="top">
-    <div class="hero__grid">
+    <div class="blobs" aria-hidden="true">
+      <span class="blob blob--1"></span>
+      <span class="blob blob--2"></span>
+      <span class="q q--1">?</span>
+      <span class="q q--2">?</span>
+      <span class="q q--3">?</span>
+    </div>
 
-      <div class="hero__body">
-        <p class="eyebrow eyebrow--light">非エンジニアのための実務AI講座 ／ 全8回</p>
+    <div class="hero__inner">
+      <p class="kicker">非エンジニアのための実務AI講座 ／ 全8回・オンライン</p>
 
-        <p class="hero__lead">
-          生成AIは、指示の精度でしか応えません。問学舎で扱うのは、ツールの操作手順ではなく、
-          <strong>自分の仕事をAIに渡せる形に分解する力</strong>です。毎回、受講者が実際に抱えている業務を持ち込んで進めます。
+      <h1 class="hero__h">
+        <span class="hero__en hero__en--out">WHAT WILL</span>
+        <span class="hero__en hero__en--fill">YOU ASK?</span>
+        <span class="hero__ja">AIに、何を訊く？</span>
+      </h1>
+
+      <p class="hero__lead">
+        AIは、こちらが訊いたぶんしか答えません。覚えるのは操作ではなく、<b>自分の仕事を言葉でほどく手つき</b>です。
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--lg" href="#apply">無料説明会に申し込む</a>
+        <a class="btn btn--line" href="#curriculum">全8回を見る</a>
+      </div>
+
+      <div class="hero__strip">
+        <p class="count" id="count">
+          <span class="count__label">9月2日（水）開講まで</span>
+          <span class="count__num" id="countNum">--</span>
+          <span class="count__unit">日</span>
         </p>
-
-        <div class="hero__actions">
-          <a class="btn" href="#apply">無料説明会に申し込む</a>
-          <a class="btn btn--ghost" href="#curriculum">カリキュラムを見る</a>
-        </div>
-
-        <dl class="facts">
-          <div class="facts__item">
-            <dt>回数</dt>
-            <dd>全8回 ／ 週1回90分</dd>
-          </div>
-          <div class="facts__item">
-            <dt>形式</dt>
-            <dd>オンライン ／ 録画あり</dd>
-          </div>
-          <div class="facts__item">
-            <dt>定員</dt>
-            <dd>12名 ／ 1期</dd>
-          </div>
-        </dl>
+        <ul class="chips">
+          <li class="chip">週1回 90分</li>
+          <li class="chip">オンライン</li>
+          <li class="chip">録画あり</li>
+          <li class="chip">定員12名</li>
+        </ul>
       </div>
 
-      <div class="hero__stage">
-        <div class="genkou" aria-hidden="true"></div>
-        <h1 class="tate">
-          <span class="tate__main">
-            <span class="ln"><span class="tcy">AI</span>に、</span><span class="ln">何を訊くか。</span>
-          </span>
-          <span class="tate__sub">答えより先に、問いを。</span>
-        </h1>
-      </div>
-
+      <p class="sticker sticker--hero">ノリで<br>来ていい</p>
     </div>
   </section>
 
-  <!-- ============ 現在地 ============ -->
-  <section class="section" id="now">
-    <div class="wrap">
-      <p class="eyebrow">現在地</p>
-      <h2 class="h2">触ってはいる。でも、仕事は変わっていない。</h2>
-
-      <div class="cards" data-reveal>
-        <article class="card">
-          <h3 class="card__title">「便利そう」で止まる</h3>
-          <p>使う場面が自分の業務と結びつかないまま、月額の請求だけが続いている。</p>
-        </article>
-        <article class="card">
-          <h3 class="card__title">出力を毎回書き直す</h3>
-          <p>指示があいまいなぶんを、自分の手直しで埋めている。結局、時間は減らない。</p>
-        </article>
-        <article class="card">
-          <h3 class="card__title">一度きりで終わる</h3>
-          <p>うまくいった手順が残らないので、来週も同じところから始めることになる。</p>
-        </article>
-      </div>
-
-      <p class="note" data-reveal>足りないのはツールの知識ではありません。仕事を言葉で分解する手順です。</p>
+  <!-- ============ 流れるスローガン ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track" id="mqTrack">
+      <span class="marquee__set">
+        <b>ASK BETTER</b><i>✳</i><b>いい問いを。</b><i>✳</i><b>問う力</b><i>✳</i><b>THE POWER OF ASKING</b><i>✳</i><b>好的提问</b><i>✳</i><b>좋은 질문</b><i>✳</i>
+      </span>
+      <span class="marquee__set">
+        <b>ASK BETTER</b><i>✳</i><b>いい問いを。</b><i>✳</i><b>問う力</b><i>✳</i><b>THE POWER OF ASKING</b><i>✳</i><b>好的提问</b><i>✳</i><b>좋은 질문</b><i>✳</i>
+      </span>
     </div>
-  </section>
+  </div>
 
-  <!-- ============ 考え方 ============ -->
-  <section class="section section--ai" id="about">
-    <div class="wrap">
-      <p class="eyebrow eyebrow--light">考え方</p>
-      <h2 class="h2 h2--light">答えは配りません。問いの立て方を渡します。</h2>
-
-      <div class="pillars" data-reveal>
-        <div class="pillar">
-          <h3 class="pillar__title">自分の業務で進める</h3>
-          <p>教材用の例題は使いません。いま抱えている仕事を毎回持ち込み、その場で分解します。</p>
-        </div>
-        <div class="pillar">
-          <h3 class="pillar__title">手順を残す</h3>
-          <p>うまくいったプロンプトは、翌週から使える手順書として書き出します。記憶に頼りません。</p>
-        </div>
-        <div class="pillar">
-          <h3 class="pillar__title">ツールに依存しない</h3>
-          <p>ChatGPT・Claude・Gemini を横断して扱います。乗り換えてもそのまま使える考え方が残ります。</p>
-        </div>
+  <!-- ============ イントロ ============ -->
+  <section class="intro" id="intro">
+    <div class="wrap wrap--narrow">
+      <h2 class="intro__en">ASK BETTER,<br>WORK LIGHTER.</h2>
+      <div class="intro__ja">
+        <p>ツールは毎月増える。<br>けれど、詰まるところはいつも同じだ。</p>
+        <p>何を任せて、何を自分で持つのか。<br>それを決めるのは、機能表ではなく<br>あなたの言葉のほうだ。</p>
+        <p>週にひとつ、問いを持ち帰る。<br>8回めには、金曜の夜が変わっている。</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ カリキュラム ============ -->
+  <!-- ============ 全8回（プログラム） ============ -->
   <section class="section" id="curriculum">
     <div class="wrap">
-      <p class="eyebrow">カリキュラム ／ 8つの問い</p>
-      <h2 class="h2">週にひとつ、問いを持ち帰る。</h2>
-      <p class="lead">各回のタイトルは、その週に答えを出す問いです。90分の終わりには、必ず持ち帰る成果物が1つ残ります。</p>
+      <div class="shead">
+        <div>
+          <p class="eyebrow">PROGRAM ／ 全8回</p>
+          <h2 class="h2">8つの問いに、順番に答えていく。</h2>
+        </div>
+        <p class="shead__note">気になる回は <span class="inline-i" aria-hidden="true">✓</span> を押してください。<br>説明会でその回の話から始めます。</p>
+      </div>
 
-      <ol class="curriculum" data-reveal>
-        <li class="lesson">
-          <p class="lesson__no">01</p>
-          <h3 class="lesson__q">何を頼めば、AIは正しく答えるか。</h3>
-          <p class="lesson__d">指示を「役割・前提・出力形式」の3要素に分解し、書き直しの回数を減らします。</p>
-          <p class="lesson__out"><span>成果物</span>自分用のプロンプト雛形 3本</p>
+      <div class="filter" role="group" aria-label="カテゴリでしぼりこむ">
+        <button class="ftab is-on" type="button" data-cat="all" aria-pressed="true">すべて<span>8</span></button>
+        <button class="ftab" type="button" data-cat="base" aria-pressed="false">基礎<span>1</span></button>
+        <button class="ftab" type="button" data-cat="info" aria-pressed="false">情報<span>1</span></button>
+        <button class="ftab" type="button" data-cat="word" aria-pressed="false">ことば<span>1</span></button>
+        <button class="ftab" type="button" data-cat="data" aria-pressed="false">データ<span>1</span></button>
+        <button class="ftab" type="button" data-cat="deck" aria-pressed="false">資料<span>2</span></button>
+        <button class="ftab" type="button" data-cat="flow" aria-pressed="false">しくみ<span>2</span></button>
+      </div>
+
+      <ol class="progs" id="progs">
+
+        <li class="prog" data-cat="base">
+          <div class="prog__thumb prog__thumb--base">
+            <span class="prog__no">01</span>
+            <span class="prog__ghost" aria-hidden="true">?</span>
+          </div>
+          <div class="prog__body">
+            <div class="prog__row">
+              <span class="tag tag--base">基礎</span>
+              <button class="fav" type="button" data-fav="l1" aria-pressed="false">
+                <span aria-hidden="true">✓</span><span class="sr">第1回を気になるリストに入れる</span>
+              </button>
+            </div>
+            <p class="prog__date">9.2<span>wed</span></p>
+            <h3 class="prog__t">何を頼めば、AIは正しく答えるか。</h3>
+            <button class="more" type="button" aria-expanded="false" aria-controls="d1">View More</button>
+            <div class="prog__d" id="d1" hidden>
+              <p>指示を「役割・前提・出力形式」の3要素に分解します。書き直しの回数が目に見えて減ります。</p>
+              <p class="prog__out"><span>持ち帰るもの</span>自分用のプロンプト雛形 3本</p>
+            </div>
+          </div>
         </li>
-        <li class="lesson">
-          <p class="lesson__no">02</p>
-          <h3 class="lesson__q">その情報は、信じていいか。</h3>
-          <p class="lesson__d">下調べと要約。出典の確かめ方と、鵜呑みにしないための確認手順を決めます。</p>
-          <p class="lesson__out"><span>成果物</span>調査メモのテンプレート</p>
+
+        <li class="prog" data-cat="info">
+          <div class="prog__thumb prog__thumb--info">
+            <span class="prog__no">02</span>
+            <span class="prog__ghost" aria-hidden="true">?</span>
+          </div>
+          <div class="prog__body">
+            <div class="prog__row">
+              <span class="tag tag--info">情報</span>
+              <button class="fav" type="button" data-fav="l2" aria-pressed="false">
+                <span aria-hidden="true">✓</span><span class="sr">第2回を気になるリストに入れる</span>
+              </button>
+            </div>
+            <p class="prog__date">9.9<span>wed</span></p>
+            <h3 class="prog__t">その情報は、信じていいか。</h3>
+            <button class="more" type="button" aria-expanded="false" aria-controls="d2">View More</button>
+            <div class="prog__d" id="d2" hidden>
+              <p>下調べと要約。出典の確かめ方と、鵜呑みにしないための手順を自分用に決めます。</p>
+              <p class="prog__out"><span>持ち帰るもの</span>調査メモのテンプレート</p>
+            </div>
+          </div>
         </li>
-        <li class="lesson">
-          <p class="lesson__no">03</p>
-          <h3 class="lesson__q">その文章は、誰が読むか。</h3>
-          <p class="lesson__d">メール・議事録・企画書を、読み手に合わせて書き分けます。文体の指示語を揃えます。</p>
-          <p class="lesson__out"><span>成果物</span>文体ガイド 1枚</p>
+
+        <li class="prog" data-cat="word">
+          <div class="prog__thumb prog__thumb--word">
+            <span class="prog__no">03</span>
+            <span class="prog__ghost" aria-hidden="true">?</span>
+          </div>
+          <div class="prog__body">
+            <div class="prog__row">
+              <span class="tag tag--word">ことば</span>
+              <button class="fav" type="button" data-fav="l3" aria-pressed="false">
+                <span aria-hidden="true">✓</span><span class="sr">第3回を気になるリストに入れる</span>
+              </button>
+            </div>
+            <p class="prog__date">9.16<span>wed</span></p>
+            <h3 class="prog__t">その文章は、誰が読むか。</h3>
+            <button class="more" type="button" aria-expanded="false" aria-controls="d3">View More</button>
+            <div class="prog__d" id="d3" hidden>
+              <p>メール・議事録・企画書を、読み手に合わせて書き分けます。文体の指示語を揃えます。</p>
+              <p class="prog__out"><span>持ち帰るもの</span>文体ガイド 1枚</p>
+            </div>
+          </div>
         </li>
-        <li class="lesson">
-          <p class="lesson__no">04</p>
-          <h3 class="lesson__q">この数字は、何を言っているか。</h3>
-          <p class="lesson__d">表計算とデータ整理。集計・分類・要約のうち、AIに任せる範囲と任せない範囲を線引きします。</p>
-          <p class="lesson__out"><span>成果物</span>集計手順シート</p>
+
+        <li class="prog" data-cat="data">
+          <div class="prog__thumb prog__thumb--data">
+            <span class="prog__no">04</span>
+            <span class="prog__ghost" aria-hidden="true">?</span>
+          </div>
+          <div class="prog__body">
+            <div class="prog__row">
+              <span class="tag tag--data">データ</span>
+              <button class="fav" type="button" data-fav="l4" aria-pressed="false">
+                <span aria-hidden="true">✓</span><span class="sr">第4回を気になるリストに入れる</span>
+              </button>
+            </div>
+            <p class="prog__date">9.23<span>wed</span></p>
+            <h3 class="prog__t">この数字は、何を言っているか。</h3>
+            <button class="more" type="button" aria-expanded="false" aria-controls="d4">View More</button>
+            <div class="prog__d" id="d4" hidden>
+              <p>表計算とデータ整理。集計・分類・要約のうち、AIに任せる範囲と任せない範囲を線引きします。</p>
+              <p class="prog__out"><span>持ち帰るもの</span>集計手順シート</p>
+            </div>
+          </div>
         </li>
-        <li class="lesson">
-          <p class="lesson__no">05</p>
-          <h3 class="lesson__q">一目で伝わる資料とは。</h3>
-          <p class="lesson__d">スライド構成と画像生成。見た目より先に、伝える順番を決めてから作ります。</p>
-          <p class="lesson__out"><span>成果物</span>提案資料のドラフト</p>
+
+        <li class="prog" data-cat="deck">
+          <div class="prog__thumb prog__thumb--deck">
+            <span class="prog__no">05</span>
+            <span class="prog__ghost" aria-hidden="true">?</span>
+          </div>
+          <div class="prog__body">
+            <div class="prog__row">
+              <span class="tag tag--deck">資料</span>
+              <button class="fav" type="button" data-fav="l5" aria-pressed="false">
+                <span aria-hidden="true">✓</span><span class="sr">第5回を気になるリストに入れる</span>
+              </button>
+            </div>
+            <p class="prog__date">9.30<span>wed</span></p>
+            <h3 class="prog__t">一目で伝わる資料とは。</h3>
+            <button class="more" type="button" aria-expanded="false" aria-controls="d5">View More</button>
+            <div class="prog__d" id="d5" hidden>
+              <p>スライド構成と画像生成。見た目より先に、伝える順番を決めてから作ります。</p>
+              <p class="prog__out"><span>持ち帰るもの</span>提案資料のドラフト</p>
+            </div>
+          </div>
         </li>
-        <li class="lesson">
-          <p class="lesson__no">06</p>
-          <h3 class="lesson__q">自分の仕事は、どこで詰まるか。</h3>
-          <p class="lesson__d">1週間の業務を棚卸しして、AIに渡せる工程と、人が持つべき工程を切り分けます。</p>
-          <p class="lesson__out"><span>成果物</span>業務分解マップ</p>
+
+        <li class="prog" data-cat="flow">
+          <div class="prog__thumb prog__thumb--flow">
+            <span class="prog__no">06</span>
+            <span class="prog__ghost" aria-hidden="true">?</span>
+          </div>
+          <div class="prog__body">
+            <div class="prog__row">
+              <span class="tag tag--flow">しくみ</span>
+              <button class="fav" type="button" data-fav="l6" aria-pressed="false">
+                <span aria-hidden="true">✓</span><span class="sr">第6回を気になるリストに入れる</span>
+              </button>
+            </div>
+            <p class="prog__date">10.7<span>wed</span></p>
+            <h3 class="prog__t">自分の仕事は、どこで詰まるか。</h3>
+            <button class="more" type="button" aria-expanded="false" aria-controls="d6">View More</button>
+            <div class="prog__d" id="d6" hidden>
+              <p>1週間の業務を棚卸しして、AIに渡せる工程と、人が持つべき工程を切り分けます。</p>
+              <p class="prog__out"><span>持ち帰るもの</span>業務分解マップ</p>
+            </div>
+          </div>
         </li>
-        <li class="lesson">
-          <p class="lesson__no">07</p>
-          <h3 class="lesson__q">同じ作業を、二度やらないためには。</h3>
-          <p class="lesson__d">固まった手順を GPTs や定型ワークフローに載せ替え、毎回書かなくていい状態にします。</p>
-          <p class="lesson__out"><span>成果物</span>自分専用のAIツール 1つ</p>
+
+        <li class="prog" data-cat="flow">
+          <div class="prog__thumb prog__thumb--flow">
+            <span class="prog__no">07</span>
+            <span class="prog__ghost" aria-hidden="true">?</span>
+          </div>
+          <div class="prog__body">
+            <div class="prog__row">
+              <span class="tag tag--flow">しくみ</span>
+              <button class="fav" type="button" data-fav="l7" aria-pressed="false">
+                <span aria-hidden="true">✓</span><span class="sr">第7回を気になるリストに入れる</span>
+              </button>
+            </div>
+            <p class="prog__date">10.14<span>wed</span></p>
+            <h3 class="prog__t">同じ作業を、二度やらないためには。</h3>
+            <button class="more" type="button" aria-expanded="false" aria-controls="d7">View More</button>
+            <div class="prog__d" id="d7" hidden>
+              <p>固まった手順を GPTs や定型ワークフローに載せ替え、毎回書かなくていい状態にします。</p>
+              <p class="prog__out"><span>持ち帰るもの</span>自分専用のAIツール 1つ</p>
+            </div>
+          </div>
         </li>
-        <li class="lesson">
-          <p class="lesson__no">08</p>
-          <h3 class="lesson__q">結局、何が置き換わったか。</h3>
-          <p class="lesson__d">卒業制作。実務を1つ選んで置き換え、かかった時間の前後を添えて発表します。</p>
-          <p class="lesson__out"><span>成果物</span>発表資料と before / after</p>
+
+        <li class="prog" data-cat="deck">
+          <div class="prog__thumb prog__thumb--deck">
+            <span class="prog__no">08</span>
+            <span class="prog__ghost" aria-hidden="true">?</span>
+          </div>
+          <div class="prog__body">
+            <div class="prog__row">
+              <span class="tag tag--deck">資料</span>
+              <button class="fav" type="button" data-fav="l8" aria-pressed="false">
+                <span aria-hidden="true">✓</span><span class="sr">第8回を気になるリストに入れる</span>
+              </button>
+            </div>
+            <p class="prog__date">10.21<span>wed</span></p>
+            <h3 class="prog__t">結局、何が置き換わったか。</h3>
+            <button class="more" type="button" aria-expanded="false" aria-controls="d8">View More</button>
+            <div class="prog__d" id="d8" hidden>
+              <p>卒業制作。実務を1つ選んで置き換え、かかった時間の前後を添えて発表します。</p>
+              <p class="prog__out"><span>持ち帰るもの</span>発表資料と before / after</p>
+            </div>
+          </div>
         </li>
+
+      </ol>
+
+      <p class="empty" id="empty" hidden>該当する回がありません。</p>
+    </div>
+  </section>
+
+  <!-- ============ 日程 ============ -->
+  <section class="section section--band" id="schedule">
+    <div class="wrap">
+      <p class="eyebrow">SCHEDULE ／ 2026年 秋期</p>
+      <h2 class="h2">毎週水曜、夜の90分。</h2>
+      <p class="lead">19:30〜21:00。当日はオンラインで集まります。来られない回は、その日のうちに録画を配信します。</p>
+
+      <ol class="cal" data-reveal>
+        <li class="cal__row"><span class="cal__d">9.2</span><span class="cal__w">wed</span><span class="cal__t">何を頼めば、AIは正しく答えるか。</span><span class="tag tag--base">基礎</span></li>
+        <li class="cal__row"><span class="cal__d">9.9</span><span class="cal__w">wed</span><span class="cal__t">その情報は、信じていいか。</span><span class="tag tag--info">情報</span></li>
+        <li class="cal__row"><span class="cal__d">9.16</span><span class="cal__w">wed</span><span class="cal__t">その文章は、誰が読むか。</span><span class="tag tag--word">ことば</span></li>
+        <li class="cal__row"><span class="cal__d">9.23</span><span class="cal__w">wed</span><span class="cal__t">この数字は、何を言っているか。</span><span class="tag tag--data">データ</span></li>
+        <li class="cal__row"><span class="cal__d">9.30</span><span class="cal__w">wed</span><span class="cal__t">一目で伝わる資料とは。</span><span class="tag tag--deck">資料</span></li>
+        <li class="cal__row"><span class="cal__d">10.7</span><span class="cal__w">wed</span><span class="cal__t">自分の仕事は、どこで詰まるか。</span><span class="tag tag--flow">しくみ</span></li>
+        <li class="cal__row"><span class="cal__d">10.14</span><span class="cal__w">wed</span><span class="cal__t">同じ作業を、二度やらないためには。</span><span class="tag tag--flow">しくみ</span></li>
+        <li class="cal__row cal__row--last"><span class="cal__d">10.21</span><span class="cal__w">wed</span><span class="cal__t">結局、何が置き換わったか。</span><span class="tag tag--deck">資料</span></li>
       </ol>
     </div>
   </section>
 
-  <!-- ============ 受講の流れ ============ -->
-  <section class="section section--pale" id="flow">
+  <!-- ============ 進め方 ============ -->
+  <section class="section" id="flow">
     <div class="wrap">
-      <p class="eyebrow">受講の流れ</p>
-      <h2 class="h2">申し込みから卒業まで。</h2>
+      <p class="eyebrow">HOW IT GOES ／ 進め方</p>
+      <h2 class="h2">申し込みから卒業まで、4つだけ。</h2>
 
-      <ol class="flow" data-reveal>
+      <ol class="steps" data-reveal>
         <li class="step">
-          <p class="step__no">STEP 1</p>
+          <p class="step__no">01</p>
           <h3 class="step__t">説明会に申し込む</h3>
-          <p>フォームに希望日を入れて送信します。所要3分、費用はかかりません。</p>
+          <p>希望日を選んで送信。所要3分、費用はかかりません。</p>
         </li>
         <li class="step">
-          <p class="step__no">STEP 2</p>
-          <h3 class="step__t">60分、オンラインで話す</h3>
-          <p>いまの業務と、AIで減らしたい時間を伺います。合わないと判断したらその場でお伝えします。</p>
+          <p class="step__no">02</p>
+          <h3 class="step__t">60分、話す</h3>
+          <p>いまの業務と、減らしたい時間を伺います。合わないと思ったらその場で言います。</p>
         </li>
         <li class="step">
-          <p class="step__no">STEP 3</p>
-          <h3 class="step__t">開講（週1回90分 × 8）</h3>
-          <p>毎週、自分の業務を1つ持ち込みます。欠席回は録画で追いつけます。</p>
+          <p class="step__no">03</p>
+          <h3 class="step__t">週1回、持ち込む</h3>
+          <p>宿題はあなたの仕事そのもの。毎週ひとつ持ってきてください。</p>
         </li>
         <li class="step">
-          <p class="step__no">STEP 4</p>
-          <h3 class="step__t">卒業後も手順は残る</h3>
-          <p>作った手順書とツールは受講者のものです。教材と録画は卒業後も見られます。</p>
+          <p class="step__no">04</p>
+          <h3 class="step__t">手順が残る</h3>
+          <p>作った手順書とツールはあなたのもの。教材と録画は卒業後も見られます。</p>
         </li>
       </ol>
     </div>
   </section>
 
-  <!-- ============ 講師 ============ -->
-  <!-- ダミー：氏名・経歴はすべて架空。写真を入れる場合は images/ に置いて .face を <img> に差し替える -->
-  <section class="section" id="teachers">
+  <!-- ============ 主催 ============ -->
+  <!-- TODO: 氏名・肩書き・プロフィール本文は本人の情報に差し替える -->
+  <section class="section section--ink" id="organizer">
     <div class="wrap">
-      <p class="eyebrow">講師</p>
-      <h2 class="h2">現場で使っている人が教えます。</h2>
+      <p class="eyebrow eyebrow--light">ORGANIZER ／ 主催</p>
 
-      <div class="teachers" data-reveal>
-        <article class="teacher">
-          <p class="face" aria-hidden="true">藤</p>
-          <div class="teacher__body">
-            <h3 class="teacher__name">藤代 悠<span class="teacher__kana">ふじしろ ゆう</span></h3>
-            <p class="teacher__role">主任講師 ／ 事業会社マーケティング部門</p>
-            <p>広告運用と販促の実務で生成AIを日常的に使う。定型レポートの作成時間を週6時間から1時間に減らした手順を、そのまま教材にしている。</p>
-          </div>
-        </article>
-        <article class="teacher">
-          <p class="face" aria-hidden="true">中</p>
-          <div class="teacher__body">
-            <h3 class="teacher__name">中原 志保<span class="teacher__kana">なかはら しほ</span></h3>
-            <p class="teacher__role">講師 ／ 元・経理、業務設計</p>
-            <p>経理13年。数字の扱いとチェック体制に詳しい。「AIに任せてよい範囲」を決める回を担当する。</p>
-          </div>
-        </article>
+      <div class="org" data-reveal>
+        <div class="org__pic">
+          <img src="images/organizer.jpg" width="360" height="360" alt="主催者・三原拓斗の顔写真" loading="lazy" decoding="async">
+        </div>
+        <div class="org__body">
+          <h2 class="org__name">三原 拓斗<span class="org__en">MIHARA TAKUTO</span></h2>
+          <p class="org__role">問学舎 主催 ／ 講師</p>
+          <p class="org__text">
+            自分の業務を生成AIに渡していく作業を、毎日ふつうにやっています。うまくいった手順も、そうでもなかった手順も、
+            そのまま教材にしています。<br>
+            この講座で扱うのは、目新しい機能ではなく「来週から使える形にして残すこと」です。
+          </p>
+          <ul class="org__pts">
+            <li>教えるのは操作より先に、問いの立て方</li>
+            <li>毎回、受講者の実務を1つ持ち込んで進めます</li>
+            <li>合わないと思ったら説明会で正直に伝えます</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ============ 受講生の声 ============ -->
-  <!-- ダミー：演習用のサンプルテキスト。実案件では実名・許諾つきの声に差し替える -->
-  <section class="section section--ai" id="voices">
+  <!-- ダミー：演習用のサンプルテキスト。実案件では許諾つきの声に差し替える -->
+  <section class="section section--band" id="voices">
     <div class="wrap">
-      <p class="eyebrow eyebrow--light">受講生の声</p>
-      <h2 class="h2 h2--light">8週間で変わったこと。</h2>
+      <p class="eyebrow">VOICES ／ 受講生の声</p>
+      <h2 class="h2">8週間で、何が変わったか。</h2>
+      <p class="lead lead--tight">※ 以下は制作演習用のサンプルです。実在の受講生の声ではありません。</p>
 
       <div class="voices" data-reveal>
-        <figure class="voice">
-          <blockquote><p>議事録の清書に毎回40分かけていました。いまは録音を渡して10分で確認するだけです。浮いた時間で先に提案書を書いています。</p></blockquote>
-          <figcaption>営業／30代<span>受講3期</span></figcaption>
+        <figure class="voice voice--a">
+          <blockquote><p>議事録の清書に毎回40分。いまは録音を渡して10分見るだけです。浮いた時間で先に提案書を書いています。</p></blockquote>
+          <figcaption>営業 ／ 30代<span>3期</span></figcaption>
         </figure>
-        <figure class="voice">
-          <blockquote><p>プロンプトという言葉すら知りませんでした。第6回で自分の1週間を書き出したとき、任せられる作業がこんなにあるのかと驚きました。</p></blockquote>
-          <figcaption>総務／40代<span>受講2期</span></figcaption>
+        <figure class="voice voice--b">
+          <blockquote><p>プロンプトという言葉すら知りませんでした。第6回で1週間を書き出したとき、任せられる作業がこんなにあるのかと。</p></blockquote>
+          <figcaption>総務 ／ 40代<span>2期</span></figcaption>
         </figure>
-        <figure class="voice">
-          <blockquote><p>いちばん効いたのは手順書を残す習慣でした。同じ指示を書き直さなくなり、チームにも配れるようになりました。</p></blockquote>
-          <figcaption>企画／30代<span>受講3期</span></figcaption>
+        <figure class="voice voice--c">
+          <blockquote><p>いちばん効いたのは手順書を残す習慣。同じ指示を書き直さなくなり、チームにも配れるようになりました。</p></blockquote>
+          <figcaption>企画 ／ 30代<span>3期</span></figcaption>
         </figure>
       </div>
     </div>
@@ -298,29 +446,29 @@
   <!-- ============ 料金 ============ -->
   <section class="section" id="price">
     <div class="wrap">
-      <p class="eyebrow">料金</p>
-      <h2 class="h2">2つのプランがあります。</h2>
-      <p class="lead">どちらも全8回・録画・教材つきです。個別に相談しながら進めたい場合は実践プランを選んでください。</p>
+      <p class="eyebrow">PRICE ／ 料金</p>
+      <h2 class="h2">プランは2つ。</h2>
+      <p class="lead">どちらも全8回・録画・教材つき。ひとりで詰まりやすい人は実践プランのほうが早いです。</p>
 
       <div class="plans" data-reveal>
         <article class="plan">
           <h3 class="plan__name">ベーシック</h3>
-          <p class="plan__price"><span class="plan__num">198,000</span><span class="plan__unit">円（税込）</span></p>
-          <p class="plan__desc">グループ受講だけで完結するプランです。</p>
+          <p class="plan__price"><span class="plan__num">198,000</span><span class="plan__unit">円<small>税込</small></span></p>
+          <p class="plan__desc">グループ受講だけで完結するプラン。</p>
           <ul class="plan__list">
             <li>全8回（週1回90分）</li>
             <li>定員12名のグループ講義</li>
             <li>教材・録画（卒業後も閲覧可）</li>
             <li>手順書テンプレート一式</li>
           </ul>
-          <a class="btn btn--ghost btn--full" href="#apply">説明会で相談する</a>
+          <a class="btn btn--line btn--full" href="#apply">説明会で相談する</a>
         </article>
 
         <article class="plan plan--pick">
           <p class="plan__tag">個別相談つき</p>
           <h3 class="plan__name">実践</h3>
-          <p class="plan__price"><span class="plan__num">298,000</span><span class="plan__unit">円（税込）</span></p>
-          <p class="plan__desc">自分の業務に踏み込んで作り切りたい方へ。</p>
+          <p class="plan__price"><span class="plan__num">298,000</span><span class="plan__unit">円<small>税込</small></span></p>
+          <p class="plan__desc">自分の業務に踏み込んで作り切りたい人へ。</p>
           <ul class="plan__list">
             <li>ベーシックのすべて</li>
             <li>個別面談 全4回（各45分）</li>
@@ -331,24 +479,24 @@
         </article>
       </div>
 
-      <p class="note" data-reveal>分割払い（3回・6回）に対応しています。法人払いの場合は請求書を発行します。</p>
+      <p class="note" data-reveal>分割払い（3回・6回）に対応。法人払いは請求書を発行します。開講7日前までのキャンセルは全額返金です。</p>
     </div>
   </section>
 
-  <!-- ============ FAQ ============ -->
-  <section class="section section--pale" id="faq">
+  <!-- ============ Q&A ============ -->
+  <section class="section" id="faq">
     <div class="wrap wrap--narrow">
-      <p class="eyebrow">よくある質問</p>
+      <p class="eyebrow">Q&amp;A ／ よくある質問</p>
       <h2 class="h2">先に答えておきます。</h2>
 
       <div class="faq" data-reveal>
         <details class="qa">
           <summary>AIを使ったことがありません。ついていけますか。</summary>
-          <p>第1回はアカウントの作成から始めます。受講者の約6割が、申込時点で「ほとんど使っていない」と答えています。</p>
+          <p>第1回はアカウントの作成から始めます。申込時点で「ほとんど使っていない」人がいちばん多いです。</p>
         </details>
         <details class="qa">
           <summary>参加できない回が出そうです。</summary>
-          <p>当日中に録画を配信します。課題は次回までに提出すれば、進行に影響しません。</p>
+          <p>当日中に録画を配信します。宿題は次回までに出せば進行に影響しません。</p>
         </details>
         <details class="qa">
           <summary>会社のPCで受講できますか。</summary>
@@ -356,7 +504,7 @@
         </details>
         <details class="qa">
           <summary>有料プランの契約は必要ですか。</summary>
-          <p>第4回以降は有料プラン（月額20ドル前後）があると演習がスムーズです。無料枠のみで進める方法も併せて案内します。</p>
+          <p>第4回以降は有料プラン（月額20ドル前後）があるとスムーズです。無料枠だけで進める方法も案内します。</p>
         </details>
         <details class="qa">
           <summary>プログラミングは扱いますか。</summary>
@@ -364,7 +512,7 @@
         </details>
         <details class="qa">
           <summary>支払い方法を教えてください。</summary>
-          <p>クレジットカード、銀行振込、請求書払いに対応しています。開講7日前までのキャンセルは全額返金します。</p>
+          <p>クレジットカード、銀行振込、請求書払いに対応しています。</p>
         </details>
       </div>
     </div>
@@ -372,49 +520,62 @@
 
   <!-- ============ CTA ============ -->
   <section class="apply" id="apply">
+    <div class="blobs" aria-hidden="true">
+      <span class="blob blob--3"></span>
+      <span class="q q--4">?</span>
+    </div>
     <div class="wrap wrap--narrow apply__inner">
-      <p class="eyebrow eyebrow--light">無料説明会</p>
-      <h2 class="apply__h">まず、いまの仕事を聞かせてください。</h2>
+      <p class="eyebrow eyebrow--light">FREE SESSION ／ 無料説明会</p>
+      <h2 class="apply__h">まず、いまの仕事を<br>聞かせてください。</h2>
       <p class="apply__lead">
-        60分のオンライン面談です。受講を決めていなくても構いません。合わないと判断した場合はその場でお伝えします。
-        次回開講は<strong>9月2日（水）</strong>、残り<strong>4席</strong>です。
+        60分のオンライン面談です。受講を決めていなくても構いません。
+        次回開講は <b>9月2日（水）</b>、残り <b>4席</b>。
       </p>
       <!-- TODO: 申込フォームのURLに差し替える -->
-      <a class="btn btn--lg" href="https://example.com/entry">無料説明会に申し込む</a>
-      <p class="apply__note">所要3分／しつこい勧誘はしません</p>
+      <a class="btn btn--lg btn--white" href="https://example.com/entry">無料説明会に申し込む</a>
+      <p class="apply__note">所要3分 ／ しつこい勧誘はしません</p>
     </div>
   </section>
 
 </main>
 
+<!-- 気になる回のバー -->
+<div class="pickbar" id="pickbar" hidden>
+  <p class="pickbar__t">気になる回が <b id="pickbarNum">0</b> つ</p>
+  <a class="btn btn--sm" href="#apply">この回の話から始める</a>
+  <button class="pickbar__x" type="button" id="pickbarX" aria-label="バーを閉じる">✕</button>
+</div>
+
 <footer class="foot">
   <div class="wrap foot__inner">
     <div class="foot__brand">
       <a class="logo logo--foot" href="#top">
-        <span class="logo__mark" aria-hidden="true">問</span>
+        <span class="logo__mark" aria-hidden="true">?</span>
         <span class="logo__text">
           <span class="logo__ja">問学舎</span>
           <span class="logo__en">MONGAKUSHA</span>
         </span>
       </a>
-      <p class="foot__tag">AIに、何を訊くか。</p>
+      <p class="foot__tag">AIに、何を訊く？</p>
     </div>
 
     <nav class="foot__nav" aria-label="フッターメニュー">
       <ul>
-        <li><a href="#about">考え方</a></li>
-        <li><a href="#curriculum">カリキュラム</a></li>
-        <li><a href="#flow">受講の流れ</a></li>
-        <li><a href="#teachers">講師</a></li>
+        <li><a href="#intro">はじめに</a></li>
+        <li><a href="#curriculum">全8回</a></li>
+        <li><a href="#schedule">日程</a></li>
+        <li><a href="#flow">進め方</a></li>
+        <li><a href="#organizer">主催</a></li>
         <li><a href="#price">料金</a></li>
-        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#faq">Q&amp;A</a></li>
+        <li><a href="#apply">説明会</a></li>
       </ul>
     </nav>
   </div>
 
   <div class="wrap foot__bottom">
-    <p class="foot__disclaimer">本ページはLP制作演習用のサンプルです。学校名・講師・受講生の声・料金・日程はすべて架空のものです。</p>
-    <p class="foot__copy">© 2026 問学舎（架空）</p>
+    <p class="foot__disclaimer">本ページはLP制作演習用のサンプルです。学校名・受講生の声・料金・日程は架空のものです。</p>
+    <a class="totop" href="#top">PAGE TOP <span aria-hidden="true">↑</span></a>
   </div>
 </footer>
 
